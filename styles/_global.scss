@@ -145,3 +145,60 @@ label{
 		box-shadow: none;
 	}
 }
+
+.home-banner{
+	height: 400px;
+	background: url('/home-banner.jpg');
+	background-position: center top;
+	.banner-content{
+		color: #fff;
+		background-color: rgba(0, 0, 0, 0.5);
+		height: 100%;
+		display: flex;
+		align-items: center;
+		h1{
+			font-size: 24px;
+		}
+	}
+	form{
+		position: relative;
+		height: 126px;
+		transition: .5s;
+		.form-control{
+			border: none;
+		}
+		.advance-button{
+			float: right;
+			color: #fff;
+			cursor: pointer;
+			font-size: 12px;
+			transition: .25s;
+		}
+		.search-button{
+			text-align: right;
+			transition: .35s;
+		}
+		.advance-search{
+			position: absolute;
+			width: 100%;
+			top: 20%;
+			visibility: hidden;
+			transition: .35s;
+			transition-delay: .35s;
+		}
+		&.advance{
+			height: 180px;
+			.advance-button{
+				visibility: hidden;
+			}
+			.advance-search{
+				visibility: visible;
+				top: 34%;
+			}
+			.search-button{
+				margin-top: 42px;
+			}
+		}
+	}
+	
+}

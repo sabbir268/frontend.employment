@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
+import BannerSearch from '../components/BannerSearch';
 
 const Home = (props) => {
     return (
@@ -10,7 +11,7 @@ const Home = (props) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main>
-                Homepage
+                <BannerSearch />
             </main>
         </Layout>
     )
