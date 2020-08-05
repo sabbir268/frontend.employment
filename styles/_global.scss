@@ -1,0 +1,147 @@
+body{
+    font-family: "Avenir Next";
+	font-size: 14px;
+	color: $text-color;
+}
+h1{
+	font-size: 30px;
+}
+h2{
+	font-size: 26px;
+}
+h3{
+	font-size: 20px;
+}
+h4{
+	font-size: 16px;
+}
+h5{
+	font-size: 14px;
+}
+p{
+	font-size: 14px;
+	color: $text-color;
+	line-height: 24px;
+}
+ul, ol{
+	margin: 0;
+	padding: 0;
+}
+.table th, .table td{
+	vertical-align: middle;
+}
+a{
+	transition: .25s;
+}
+img{
+	max-width: 100%;
+}
+label{
+	font-size: 12px;
+	color: #666;
+}
+.box-container{
+	max-width: 1340px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.sm-gutters {
+	margin-right: -10px;
+	margin-left: -10px;
+  
+	> .col,
+	> [class*="col-"] {
+	  padding-right: 10px;
+	  padding-left: 10px;
+	}
+}
+.section-padding{
+	padding: 80px 0px;
+}
+.form-control{
+	height: 44px;
+	font-size: 14px;
+	border-radius: 0px;
+	-webkit-appearance: none;
+	&:focus{
+		box-shadow: none;
+		border-color: #333;
+	}
+}
+.form-control.error{
+	border-color: $red;
+}
+.form-error{
+	background: #ffdce0;
+    border: 1px solid rgba(27, 31, 35, 0.15);
+    color: #86181d;
+    padding: 13px 15px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.error-message{
+	font-size: 12px;
+	color: $red;
+}
+.form-group.select{
+	position: relative;
+	&:before{
+		content: "";
+		height: 7px;
+		width: 7px;
+		border-right: 1px solid #333333;
+		border-top: 1px solid #333333;
+		top: 14px;
+		right: 14px;
+		position: absolute;
+		transform: rotate(135deg);
+		z-index: 1;
+	}
+	&.label:before{
+		top: 44px;
+	}
+}
+.pagination{
+	.page-item.active{
+		.page-link{
+			background-color: #333;
+			border-color: #333;
+		}
+	}
+	.page-link{
+		color: $text-color;
+		box-shadow: none;
+		cursor: pointer;
+	}
+}
+.btn-default{
+	background-color: $primary-color;
+	border: 1px solid $primary-color;
+	color: #fff;
+	padding: 8px 15px;
+	min-width: 120px;
+	&:hover{
+		color: #fff;
+	}
+	&:focus{
+		box-shadow: none;
+	}
+	&.disabled{
+		background-color: #059e7f;
+		border-color: #059e7f;
+	}
+}
+.btn-black{
+	background-color: #333;
+	border: 1px solid #333;
+	color: #fff;
+	padding: 8px 15px;
+	min-width: 120px;
+	&:hover{
+		color: #fff;
+	}
+	&:focus{
+		box-shadow: none;
+	}
+}
