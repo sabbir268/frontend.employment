@@ -21,7 +21,7 @@ class BannerSearch extends React.Component {
             <section className="home-banner">
                 <div className="banner-content">
                     <div className="container">
-                        <h1>Get the best candidate for next vacantcy</h1>
+                        <h1>Find the best candidate for your next vacantcy</h1>
                         <form className={this.state.advanceSearch ? 'advance' : ''}>
                             <div className="row sm-gutters">
                                 <div className="col-sm-4">
