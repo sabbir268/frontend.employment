@@ -9,12 +9,12 @@ class CandidateLogin extends React.Component {
     render() {
         return (
             <Layout>
-                <div className="section-padding section-bg login-page candidate">
+                <div className="section-padding login-page candidate">
                     <div className="container">
-                        <div className="row">
+                        <div className="row align-items-center">
                             <div className="col-sm-6">
-                                <div>
-                                    {/* <img src="/icons/employee.png" alt="employee" /> */}
+                                <div className="login-image">
+                                    <img src="/icons/teamwork.png" alt="employee" />
                                 </div>
                             </div>
                             <div className="col-sm-6">

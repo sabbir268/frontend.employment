@@ -1,5 +1,9 @@
 .login-page{
-    background-color: #e3e3e3;
+    background-color: $bg-color;
+    .login-image{
+        max-width: 300px;
+        margin: auto;
+    }
     .login-form{
         max-width: 360px;
         margin:  auto;
