@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Layout from '../../components/Layout';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -42,7 +43,7 @@ class CandidateLogin extends React.Component {
                                     </div>
                                     <div className="not-have">
                                         <p>Don't have an account?</p>
-                                        <a href="#" className="btn btn-black">Register Here</a>
+                                        <Link href="/candidate/register"><a className="btn btn-black">Register Here</a></Link>
                                     </div>
                                 </div>
                             </div>

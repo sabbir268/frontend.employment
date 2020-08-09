@@ -55,3 +55,55 @@
 	}
 	
 }
+.find-talents{
+	h1{
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.talent-item{
+		margin-bottom: 40px;
+		img{
+			margin-bottom: 16px;
+		}
+		h3{
+			margin-bottom: 5px;
+		}
+		p{
+			margin-bottom: 10px;
+		}
+		a{
+			color: $green;
+			font-weight: 500;
+			text-decoration: underline;
+		}
+	}
+}
+.cv-collection{
+	background-color: $green;
+	color: #fff;
+	h1{
+		text-transform: capitalize;
+	}
+	p{
+		color: #fff;
+	}
+	.persons{
+		position: relative;
+		.person-item{
+			position: absolute;
+			max-width: 200px;
+			overflow: hidden;
+			border: 4px solid $primary-color;
+			border-radius: 100%;
+			&.two{
+				left: 150px;
+				max-width: 150px;
+			}
+			&.three{
+				max-width: 120px;
+				left: 130px;
+				top: 130px;
+			}
+		}
+	}
+}
