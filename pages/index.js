@@ -14,7 +14,7 @@ const Home = (props) => {
                 <title>Home</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main>
+            <main className="homepage">
                 <BannerSearch />
                 <section className="find-talents section-padding">
                     <div className="container">
@@ -77,21 +77,28 @@ const Home = (props) => {
                             <div className="col-sm-6">
                                 <div className="persons">
                                     <div className="person-item one">
-                                        <img src="/images/person.jpg" alt="person" />
+                                        <img src="/images/face.jpg" alt="person" />
                                     </div>
                                     <div className="person-item two">
-                                        <img src="/images/person.jpg" alt="person" />
+                                        <img src="/images/face-2.jpg" alt="person" />
                                     </div>
                                     <div className="person-item three">
-                                        <img src="/images/person.jpg" alt="person" />
+                                        <img src="/images/face-3.jpg" alt="person" />
                                     </div>
                                 </div>
                             </div>
                             <div className="col-sm-6">
-                                <h1>Nerrow down your talent hunt process by our rich CV collection.</h1>
-                                <p>Creative Talent Hunt is an initiative by the Government of Bangladesh to find great talents from all over the country. The competition was first launched in 2013. The competition is held in 3 categories and 4 subjects.Creative Talent Hunt is an initiative by the Government of Bangladesh to find great talents from all over the country. The competition was first launched in 2013. The competition is held in 3 categories and 4 subjects.</p>
+                                <h1>Nerrow down your talent hunt process from our rich CV collection.</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempus fringilla ipsum, vel pulvinar est porttitor et. Mauris libero massa, interdum eu tortor eu, iaculis elementum mi. Quisque euismod elementum eros sed pellentesque.</p>
+                                <p>Praesent at metus nec erat convallis pharetra. Integer quis urna egestas, feugiat eros eget, ultricies mi. Curabitur aliquam nunc vel nibh condimentum, et varius odio ultrices. Integer luctus arcu vitae lacus fermentum tincidunt. Curabitur rhoncus ante non ornare tempor.</p>
+                                <a href="#" className="btn btn-default">Register</a>
                             </div>
                         </div>
+                    </div>
+                </section>
+                <section className="recent-jobs section-padding">
+                    <div className="container">
+                        <h1>Recent Jobs</h1>
                     </div>
                 </section>
             </main>

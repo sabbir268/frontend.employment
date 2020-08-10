@@ -89,18 +89,23 @@
 	}
 	.persons{
 		position: relative;
+		margin-left: 100px;
+		margin-top: 50px;
 		.person-item{
 			position: absolute;
-			max-width: 200px;
+			width: 200px;
+			height: 200px;
 			overflow: hidden;
 			border: 4px solid $primary-color;
 			border-radius: 100%;
 			&.two{
 				left: 150px;
-				max-width: 150px;
+				width: 150px;
+				height: 150px;
 			}
 			&.three{
-				max-width: 120px;
+				width: 120px;
+				height: 120px;
 				left: 130px;
 				top: 130px;
 			}
