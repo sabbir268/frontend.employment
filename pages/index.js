@@ -5,7 +5,8 @@ import BannerSearch from '../components/BannerSearch';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowAltRight, faMapMarkerAlt, faFilter, faSuitcase, faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { faClock } from '@fortawesome/free-regular-svg-icons';
 
 const Home = (props) => {
     return (
@@ -99,6 +100,65 @@ const Home = (props) => {
                 <section className="recent-jobs section-padding">
                     <div className="container">
                         <h1>Recent Jobs</h1>
+                        <div className="job-list">
+                            <div className="job-item">
+                                <div className="logo">
+                                    <img src="/images/company.svg" alt="company logo" />
+                                </div>
+                                <div className="content">
+                                    <h3><a href="#">Marketing and Communications</a></h3>
+                                    <ul>
+                                        <li><FontAwesomeIcon icon={faBuilding} /> <a href="#">Pendragon Green Ltd</a></li>
+                                        <li><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh</li>
+                                        <li><FontAwesomeIcon icon={faFilter} /> IT & Telecoms</li>
+                                        <li><FontAwesomeIcon icon={faSuitcase} /> Full-Time</li>
+                                    </ul>
+                                </div>
+                                <div className="apply">
+                                    <a href="#" className="btn btn-green">Apply</a>
+                                    <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
+                                </div>
+                            </div>
+                            <div className="job-item">
+                                <div className="logo">
+                                    <img src="/images/company.svg" alt="company logo" />
+                                </div>
+                                <div className="content">
+                                    <h3><a href="#">Marketing and Communications</a></h3>
+                                    <ul>
+                                        <li><FontAwesomeIcon icon={faBuilding} /> <a href="#">Pendragon Green Ltd</a></li>
+                                        <li><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh</li>
+                                        <li><FontAwesomeIcon icon={faFilter} /> IT & Telecoms</li>
+                                        <li><FontAwesomeIcon icon={faSuitcase} /> Full-Time</li>
+                                    </ul>
+                                </div>
+                                <div className="apply">
+                                    <a href="#" className="btn btn-green">Apply</a>
+                                    <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
+                                </div>
+                            </div>
+                            <div className="job-item">
+                                <div className="logo">
+                                    <img src="/images/company.svg" alt="company logo" />
+                                </div>
+                                <div className="content">
+                                    <h3><a href="#">Marketing and Communications</a></h3>
+                                    <ul>
+                                        <li><FontAwesomeIcon icon={faBuilding} /> <a href="#">Pendragon Green Ltd</a></li>
+                                        <li><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh</li>
+                                        <li><FontAwesomeIcon icon={faFilter} /> IT & Telecoms</li>
+                                        <li><FontAwesomeIcon icon={faSuitcase} /> Full-Time</li>
+                                    </ul>
+                                </div>
+                                <div className="apply">
+                                    <a href="#" className="btn btn-green">Apply</a>
+                                    <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="text-center mt-4">
+                            <a href="#" className="btn btn-default">View More</a>
+                        </div>
                     </div>
                 </section>
             </main>
