@@ -161,6 +161,54 @@ const Home = (props) => {
                         </div>
                     </div>
                 </section>
+
+                <section className="how-works section-padding">
+                    <h1 className="text-center mb-5">How it Works</h1>
+                </section>
+
+                <section className="why-employment section-padding">
+                    <div className="container">
+                        <h1 className="text-center mb-5">Why Employment</h1>
+                        <div className="row">
+                            <div className="col-sm-3">
+                                <div className="why-item">
+                                    <div className="image">
+                                        <img src="/icons/resources.png" alt="candidates" />
+                                    </div>
+                                    <h3>3000+</h3>
+                                    <p>Candidates</p>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="why-item">
+                                    <div className="image">
+                                        <img src="/icons/jobs.png" alt="candidates" />
+                                    </div>
+                                    <h3>5000+</h3>
+                                    <p>Jobs</p>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="why-item">
+                                    <div className="image">
+                                        <img src="/icons/businessman.png" alt="candidates" />
+                                    </div>
+                                    <h3>1000+</h3>
+                                    <p>Employer</p>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="why-item">
+                                    <div className="image">
+                                        <img src="/icons/courses.png" alt="candidates" />
+                                    </div>
+                                    <h3>500+</h3>
+                                    <p>Courses</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
         </Layout>
     )
