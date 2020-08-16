@@ -23,7 +23,9 @@ const Home = (props) => {
                         <div className="row">
                             <div className="col-sm-4">
                                 <div className="talent-item">
-                                    <img src="/icons/statistics.png" alt="finance" />
+                                    <div className="icon-design">
+                                        <img src="/icons/statistics.png" alt="finance" />
+                                    </div>
                                     <h3>Finance Experts</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
                                     <a href="#">View Talents <FontAwesomeIcon icon={faLongArrowAltRight} /></a>
@@ -31,7 +33,9 @@ const Home = (props) => {
                             </div>
                             <div className="col-sm-4">
                                 <div className="talent-item">
-                                    <img src="/icons/commercials.png" alt="finance" />
+                                    <div className="icon-design">
+                                        <img src="/icons/commercials.png" alt="finance" />
+                                    </div>
                                     <h3>Commercial</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
                                     <a href="#">View Talents <FontAwesomeIcon icon={faLongArrowAltRight} /></a>
@@ -39,7 +43,9 @@ const Home = (props) => {
                             </div>
                             <div className="col-sm-4">
                                 <div className="talent-item">
-                                    <img src="/icons/managers.png" alt="finance" />
+                                    <div className="icon-design">
+                                        <img src="/icons/managers.png" alt="finance" />
+                                    </div>
                                     <h3>Managers</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
                                     <a href="#">View Talents <FontAwesomeIcon icon={faLongArrowAltRight} /></a>
@@ -47,7 +53,9 @@ const Home = (props) => {
                             </div>
                             <div className="col-sm-4">
                                 <div className="talent-item">
-                                    <img src="/icons/engineers.png" alt="finance" />
+                                    <div className="icon-design">
+                                        <img src="/icons/engineers.png" alt="finance" />
+                                    </div>
                                     <h3>Engeeners</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
                                     <a href="#">View Talents <FontAwesomeIcon icon={faLongArrowAltRight} /></a>
@@ -55,7 +63,9 @@ const Home = (props) => {
                             </div>
                             <div className="col-sm-4">
                                 <div className="talent-item">
-                                    <img src="/icons/marketing.png" alt="finance" />
+                                    <div className="icon-design">
+                                        <img src="/icons/marketing.png" alt="finance" />
+                                    </div>
                                     <h3>Marketing Professionals</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
                                     <a href="#">View Talents <FontAwesomeIcon icon={faLongArrowAltRight} /></a>
@@ -63,7 +73,9 @@ const Home = (props) => {
                             </div>
                             <div className="col-sm-4">
                                 <div className="talent-item">
-                                    <img src="/icons/lawyer.png" alt="finance" />
+                                    <div className="icon-design">
+                                        <img src="/icons/lawyer.png" alt="finance" />
+                                    </div>
                                     <h3>Lawyers</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
                                     <a href="#">View Talents <FontAwesomeIcon icon={faLongArrowAltRight} /></a>
@@ -162,8 +174,39 @@ const Home = (props) => {
                     </div>
                 </section>
 
-                <section className="how-works section-padding">
+                <section className="work-process section-padding">
                     <h1 className="text-center mb-5">How it Works</h1>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm-4">
+                                <div className="process-item">
+                                    <div className="icon-design">
+                                        <img src="/icons/account.png" alt="account" />
+                                    </div>
+                                    <h3>Create an Account</h3>
+                                    <p>Gravida quis blandit turpis cursus in hac habitasse platea. Ut diam quam nulla porttitor.</p>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="process-item">
+                                    <div className="icon-design">
+                                        <img src="/icons/search-jobs.png" alt="account" />
+                                    </div>
+                                    <h3>Search Jobs</h3>
+                                    <p>Gravida quis blandit turpis cursus in hac habitasse platea. Ut diam quam nulla porttitor.</p>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="process-item">
+                                    <div className="icon-design">
+                                        <img src="/icons/piggy-bank.png" alt="account" />
+                                    </div>
+                                    <h3>Save & Apply</h3>
+                                    <p>Gravida quis blandit turpis cursus in hac habitasse platea. Ut diam quam nulla porttitor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section className="why-employment section-padding">
