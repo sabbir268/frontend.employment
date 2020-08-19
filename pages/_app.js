@@ -4,6 +4,7 @@ import { createWrapper } from 'next-redux-wrapper';
 import { Provider } from 'react-redux';
 import initStore from '../store';
 
+import '../styles/flaticon.css';
 import '../styles/styles.scss';
 
 import { library, config } from '@fortawesome/fontawesome-svg-core';

@@ -3,10 +3,12 @@ import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import BannerSearch from '../components/BannerSearch';
 
+import CountUp from 'react-countup';
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltRight, faMapMarkerAlt, faFilter, faSuitcase, faBuilding } from '@fortawesome/free-solid-svg-icons';
-import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { faClock, faBell } from '@fortawesome/free-regular-svg-icons';
 
 const Home = (props) => {
     return (
@@ -19,12 +21,12 @@ const Home = (props) => {
                 <BannerSearch />
                 <section className="find-talents section-padding">
                     <div className="container">
-                        <h1>Find Talents by Category</h1>
+                        <h1 className="section-title">Find Talents by <span>Category</span></h1>
                         <div className="row">
                             <div className="col-sm-4">
                                 <div className="talent-item">
                                     <div className="icon-design">
-                                        <img src="/icons/statistics.png" alt="finance" />
+                                        <i className="flaticon-profits"></i>
                                     </div>
                                     <h3>Finance Experts</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
@@ -34,7 +36,7 @@ const Home = (props) => {
                             <div className="col-sm-4">
                                 <div className="talent-item">
                                     <div className="icon-design">
-                                        <img src="/icons/commercials.png" alt="finance" />
+                                        <i className="flaticon-bank"></i>
                                     </div>
                                     <h3>Commercial</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
@@ -44,7 +46,7 @@ const Home = (props) => {
                             <div className="col-sm-4">
                                 <div className="talent-item">
                                     <div className="icon-design">
-                                        <img src="/icons/managers.png" alt="finance" />
+                                        <i className="flaticon-group"></i>
                                     </div>
                                     <h3>Managers</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
@@ -54,7 +56,7 @@ const Home = (props) => {
                             <div className="col-sm-4">
                                 <div className="talent-item">
                                     <div className="icon-design">
-                                        <img src="/icons/engineers.png" alt="finance" />
+                                        <i className="flaticon-artificial-intelligence"></i>
                                     </div>
                                     <h3>Engeeners</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
@@ -64,7 +66,7 @@ const Home = (props) => {
                             <div className="col-sm-4">
                                 <div className="talent-item">
                                     <div className="icon-design">
-                                        <img src="/icons/marketing.png" alt="finance" />
+                                        <i className="flaticon-portfolio"></i>
                                     </div>
                                     <h3>Marketing Professionals</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
@@ -74,7 +76,7 @@ const Home = (props) => {
                             <div className="col-sm-4">
                                 <div className="talent-item">
                                     <div className="icon-design">
-                                        <img src="/icons/lawyer.png" alt="finance" />
+                                        <i className="flaticon-trial"></i>
                                     </div>
                                     <h3>Lawyers</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
@@ -101,7 +103,7 @@ const Home = (props) => {
                                 </div>
                             </div>
                             <div className="col-sm-6">
-                                <h1>Nerrow down your talent hunt process from our rich CV collection.</h1>
+                                <h1>Minimise your talent hunt process from our rich CV collection.</h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempus fringilla ipsum, vel pulvinar est porttitor et. Mauris libero massa, interdum eu tortor eu, iaculis elementum mi. Quisque euismod elementum eros sed pellentesque.</p>
                                 <p>Praesent at metus nec erat convallis pharetra. Integer quis urna egestas, feugiat eros eget, ultricies mi. Curabitur aliquam nunc vel nibh condimentum, et varius odio ultrices. Integer luctus arcu vitae lacus fermentum tincidunt. Curabitur rhoncus ante non ornare tempor.</p>
                                 <a href="#" className="btn btn-default">Register</a>
@@ -111,7 +113,7 @@ const Home = (props) => {
                 </section>
                 <section className="recent-jobs section-padding">
                     <div className="container">
-                        <h1>Recent Jobs</h1>
+                        <h1 className="section-title">Recent Jobs</h1>
                         <div className="job-list">
                             <div className="job-item">
                                 <div className="logo">
@@ -127,7 +129,7 @@ const Home = (props) => {
                                     </ul>
                                 </div>
                                 <div className="apply">
-                                    <a href="#" className="btn btn-green">Apply</a>
+                                    <a href="#" className="btn btn-green">Apply Now</a>
                                     <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
                                 </div>
                             </div>
@@ -145,7 +147,7 @@ const Home = (props) => {
                                     </ul>
                                 </div>
                                 <div className="apply">
-                                    <a href="#" className="btn btn-green">Apply</a>
+                                    <a href="#" className="btn btn-green">Apply Now</a>
                                     <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
                                 </div>
                             </div>
@@ -163,7 +165,7 @@ const Home = (props) => {
                                     </ul>
                                 </div>
                                 <div className="apply">
-                                    <a href="#" className="btn btn-green">Apply</a>
+                                    <a href="#" className="btn btn-green">Apply Now</a>
                                     <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
                                 </div>
                             </div>
@@ -175,7 +177,7 @@ const Home = (props) => {
                 </section>
 
                 <section className="work-process section-padding">
-                    <h1 className="text-center mb-5">How it Works</h1>
+                    <h1 className="section-title">How it Works</h1>
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-4">
@@ -209,49 +211,70 @@ const Home = (props) => {
                     </div>
                 </section>
 
-                <section className="why-employment section-padding">
-                    <div className="container">
-                        <h1 className="text-center mb-5">Why Employment</h1>
-                        <div className="row">
-                            <div className="col-sm-3">
-                                <div className="why-item">
-                                    <div className="image">
-                                        <img src="/icons/resources.png" alt="candidates" />
+                <section className="why-employment">
+                    <div className="overlay section-padding">
+                        <div className="container">
+                            <h1 className="section-title">Why Employment</h1>
+                            <div className="row">
+                                <div className="col-sm-3">
+                                    <div className="why-item">
+                                        <div className="image">
+                                            <img src="/icons/resources.png" alt="candidates" />
+                                        </div>
+                                        <h3><CountUp end={3000} />+</h3>
+                                        <p>Candidates</p>
                                     </div>
-                                    <h3>3000+</h3>
-                                    <p>Candidates</p>
                                 </div>
-                            </div>
-                            <div className="col-sm-3">
-                                <div className="why-item">
-                                    <div className="image">
-                                        <img src="/icons/jobs.png" alt="candidates" />
+                                <div className="col-sm-3">
+                                    <div className="why-item">
+                                        <div className="image">
+                                            <img src="/icons/jobs.png" alt="candidates" />
+                                        </div>
+                                        <h3><CountUp end={5000} />+</h3>
+                                        <p>Jobs</p>
                                     </div>
-                                    <h3>5000+</h3>
-                                    <p>Jobs</p>
                                 </div>
-                            </div>
-                            <div className="col-sm-3">
-                                <div className="why-item">
-                                    <div className="image">
-                                        <img src="/icons/businessman.png" alt="candidates" />
+                                <div className="col-sm-3">
+                                    <div className="why-item">
+                                        <div className="image">
+                                            <img src="/icons/businessman.png" alt="candidates" />
+                                        </div>
+                                        <h3><CountUp end={1000} />+</h3>
+                                        <p>Employer</p>
                                     </div>
-                                    <h3>1000+</h3>
-                                    <p>Employer</p>
                                 </div>
-                            </div>
-                            <div className="col-sm-3">
-                                <div className="why-item">
-                                    <div className="image">
-                                        <img src="/icons/courses.png" alt="candidates" />
+                                <div className="col-sm-3">
+                                    <div className="why-item">
+                                        <div className="image">
+                                            <img src="/icons/courses.png" alt="candidates" />
+                                        </div>
+                                        <h3><CountUp end={500} />+</h3>
+                                        <p>Courses</p>
                                     </div>
-                                    <h3>500+</h3>
-                                    <p>Courses</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+
+                <section className="subscribe">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm-4">
+                                <FontAwesomeIcon icon={faBell} className="icon" />
+                                <h3>Get Job Notifications</h3>
+                                <p>Free Subscribe Our Newsletter Now!</p>
+                            </div>
+                            <div className="col-sm-8">
+                                <form>
+                                    <input type="text" name="subscribe" placeholder="Enter Your Email" />
+                                    <button>Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
             </main>
         </Layout>
     )
