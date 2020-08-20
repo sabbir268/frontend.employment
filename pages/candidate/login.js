@@ -14,8 +14,13 @@ class CandidateLogin extends React.Component {
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-sm-6">
-                                <div className="login-image">
+                                {/* <div className="login-image">
                                     <img src="/icons/teamwork.png" alt="employee" />
+                                </div> */}
+                                <div>
+                                    <h2>Manage your profile and shortlisted jobs</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla nec leo ut pretium. Donec id dui lacus. Phasellus scelerisque, leo nec imperdiet faucibus, lorem turpis volutpat mi, eu posuere diam enim eget orci.</p>
+                                    <p>Donec fringilla, quam a molestie dapibus, urna sem venenatis tellus, sit amet placerat quam odio et purus.</p>
                                 </div>
                             </div>
                             <div className="col-sm-6">

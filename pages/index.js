@@ -4,10 +4,13 @@ import Layout from '../components/Layout';
 import BannerSearch from '../components/BannerSearch';
 
 import CountUp from 'react-countup';
+import SwiperCore, { Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+SwiperCore.use([Pagination]);
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLongArrowAltRight, faMapMarkerAlt, faFilter, faSuitcase, faBuilding } from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowAltRight, faMapMarkerAlt, faFilter, faSuitcase, faBuilding, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import { faClock, faBell } from '@fortawesome/free-regular-svg-icons';
 
 const Home = (props) => {
@@ -58,7 +61,7 @@ const Home = (props) => {
                                     <div className="icon-design">
                                         <i className="flaticon-artificial-intelligence"></i>
                                     </div>
-                                    <h3>Engeeners</h3>
+                                    <h3>Engineers</h3>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
                                     <a href="#">View Talents <FontAwesomeIcon icon={faLongArrowAltRight} /></a>
                                 </div>
@@ -169,9 +172,45 @@ const Home = (props) => {
                                     <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
                                 </div>
                             </div>
+                            <div className="job-item">
+                                <div className="logo">
+                                    <img src="/images/company.svg" alt="company logo" />
+                                </div>
+                                <div className="content">
+                                    <h3><a href="#">Marketing and Communications</a></h3>
+                                    <ul>
+                                        <li><FontAwesomeIcon icon={faBuilding} /> <a href="#">Pendragon Green Ltd</a></li>
+                                        <li><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh</li>
+                                        <li><FontAwesomeIcon icon={faFilter} /> IT & Telecoms</li>
+                                        <li><FontAwesomeIcon icon={faSuitcase} /> Full-Time</li>
+                                    </ul>
+                                </div>
+                                <div className="apply">
+                                    <a href="#" className="btn btn-green">Apply Now</a>
+                                    <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
+                                </div>
+                            </div>
+                            <div className="job-item">
+                                <div className="logo">
+                                    <img src="/images/company.svg" alt="company logo" />
+                                </div>
+                                <div className="content">
+                                    <h3><a href="#">Marketing and Communications</a></h3>
+                                    <ul>
+                                        <li><FontAwesomeIcon icon={faBuilding} /> <a href="#">Pendragon Green Ltd</a></li>
+                                        <li><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh</li>
+                                        <li><FontAwesomeIcon icon={faFilter} /> IT & Telecoms</li>
+                                        <li><FontAwesomeIcon icon={faSuitcase} /> Full-Time</li>
+                                    </ul>
+                                </div>
+                                <div className="apply">
+                                    <a href="#" className="btn btn-green">Apply Now</a>
+                                    <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
+                                </div>
+                            </div>
                         </div>
                         <div className="text-center mt-4">
-                            <a href="#" className="btn btn-default">View More</a>
+                            <a href="#" className="btn btn-default">View All</a>
                         </div>
                     </div>
                 </section>
@@ -253,6 +292,51 @@ const Home = (props) => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="testimonial section-padding">
+                    <h1 className="section-title">What Our Clients Says</h1>
+                    <div className="container">
+                        <div className="testimonials">
+                            <Swiper
+                                spaceBetween={20}
+                                slidesPerView={2}
+                                pagination={{ clickable: true }}
+                                onSlideChange={() => console.log('slide change')}
+                                onSwiper={(swiper) => console.log(swiper)} >
+                                <SwiperSlide>
+                                    <div className="testimonial-item">
+                                        <div className="image">
+                                            <img src="/images/clients/1.jpg" alt="client" />
+                                        </div>
+                                        <FontAwesomeIcon icon={faQuoteRight} className="icon" />
+                                        <h3>Babriel Nolan <span>CEO</span></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="testimonial-item">
+                                        <div className="image">
+                                            <img src="/images/clients/2.jpg" alt="client" />
+                                        </div>
+                                        <FontAwesomeIcon icon={faQuoteRight} className="icon" />
+                                        <h3>Olivia Reynolds <span>Software Engineers</span></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="testimonial-item">
+                                        <div className="image">
+                                            <img src="/images/clients/3.jpg" alt="client" />
+                                        </div>
+                                        <FontAwesomeIcon icon={faQuoteRight} className="icon" />
+                                        <h3>Rosie Marshall <span>Photograph</span></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                    </div>
+                                </SwiperSlide>
+                            </Swiper>
                         </div>
                     </div>
                 </section>

@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import initStore from '../store';
 
 import '../styles/flaticon.css';
+import 'swiper/swiper.scss';
+import 'swiper/components/pagination/pagination.scss';
 import '../styles/styles.scss';
 
 import { library, config } from '@fortawesome/fontawesome-svg-core';

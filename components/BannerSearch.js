@@ -22,12 +22,28 @@ class BannerSearch extends React.Component {
                 <div className="banner-content">
                     <div className="container">
                         <div className="row">
-                            <div className="col-sm-4">
-                                <h2>Find the best</h2>
-                                <h1>Candidate</h1>
-                                <h2>For your next vacantcy</h2>
+                            <div className="col-sm-7">
+                                <h1>Employer?</h1>
+                                <h2>Find Your <span>Talent</span></h2>
+                                <form className="regular-form">
+                                    <div className="form-group">
+                                        <input type="text" name="search" placeholder="Categroy, Name, Skills" className="form-control" />
+                                        <button type="submit"><i className="flaticon-magnifying-glass"></i></button>
+                                        <p onClick={this.showAdavanceSearch} className="advance-button">Advance Search</p>
+                                    </div>
+                                    <p className="are-you"><a href="#">Are you Hiring? Post a Job Now.</a></p>
+                                </form>
                             </div>
-                            <div className="col-sm-8">
+                            <div className="col-sm-5">
+                                <div className="banner-box">
+                                    <a href="#" className="btn btn-default">Drop Your CV</a>
+                                    <ul>
+                                        <li><a href="#"><i className="flaticon-account"></i> Sign Up</a></li>
+                                        <li><a href="#"><i className="flaticon-login"></i> Sign In</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="col-sm-12">
                                 <form className={this.state.advanceSearch ? 'advance' : ''}>
                                     <div className="row sm-gutters">
                                         <div className="col-sm-4">
@@ -100,6 +116,7 @@ class BannerSearch extends React.Component {
                                                 </div>
                                             </div>
                                         </div>
+                                        <p className="are-you"><a href="#">Are you Hiring? Post a Job Now.</a></p>
                                     </div>
                                     <div className="search-button">
                                         <button className="btn btn-default">Search</button>

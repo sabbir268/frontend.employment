@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 19/08/2020 05:33
+  	Creation date: 20/08/2020 09:43
   	*/
 
 @font-face {
@@ -25,7 +25,7 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-        font-size: 24px;
+        font-size: 22px;
 font-style: normal;
 /* margin-left: 20px; */
 }
@@ -41,3 +41,5 @@ font-style: normal;
 .flaticon-magnifying-glass:before { content: "\f108"; }
 .flaticon-account:before { content: "\f109"; }
 .flaticon-piggy-bank:before { content: "\f10a"; }
+.flaticon-login:before { content: "\f10b"; }
+.flaticon-login-1:before { content: "\f10c"; }
