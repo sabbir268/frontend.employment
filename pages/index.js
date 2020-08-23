@@ -22,7 +22,115 @@ const Home = (props) => {
             </Head>
             <main className="homepage">
                 <BannerSearch />
-                <section className="find-talents section-padding">
+                
+                <section className="top-categories section-padding section-bg">
+                    <div className="container">
+                        <h1 className="section-title">Top <span>Job</span> Categories</h1>
+                        <div className="row">
+                            <div className="col-sm-3">
+                                <div className="cat-item">
+                                    <h2>450</h2>
+                                    <p><a href="#">Accounting/Finance</a></p>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="cat-item">
+                                    <h2>400</h2>
+                                    <p><a href="#">Engineer/Architects</a></p>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="cat-item">
+                                    <h2>360</h2>
+                                    <p><a href="#">Medical/Health</a></p>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="cat-item">
+                                    <h2>380</h2>
+                                    <p><a href="#">NGO/Development</a></p>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="cat-item">
+                                    <h2>350</h2>
+                                    <p><a href="#">Production/Operation</a></p>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="cat-item">
+                                    <h2>300</h2>
+                                    <p><a href="#">Education/Training</a></p>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="cat-item">
+                                    <h2>250</h2>
+                                    <p><a href="#">IT/Telecommunication</a></p>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="cat-item">
+                                    <h2>100</h2>
+                                    <p><a href="#">Marketing/Sales</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="text-center">
+                            <a href="#" className="btn btn-default">View More</a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section className="why-employment">
+                    <div className="overlay section-padding">
+                        <div className="container">
+                            <h1 className="section-title">Why Employment</h1>
+                            <div className="row">
+                                <div className="col-sm-3">
+                                    <div className="why-item">
+                                        <div className="image">
+                                            <img src="/icons/resources.png" alt="candidates" />
+                                        </div>
+                                        <h3><CountUp end={3000} />+</h3>
+                                        <p>Candidates</p>
+                                    </div>
+                                </div>
+                                <div className="col-sm-3">
+                                    <div className="why-item">
+                                        <div className="image">
+                                            <img src="/icons/jobs.png" alt="candidates" />
+                                        </div>
+                                        <h3><CountUp end={5000} />+</h3>
+                                        <p>Jobs</p>
+                                    </div>
+                                </div>
+                                <div className="col-sm-3">
+                                    <div className="why-item">
+                                        <div className="image">
+                                            <img src="/icons/businessman.png" alt="candidates" />
+                                        </div>
+                                        <h3><CountUp end={1000} />+</h3>
+                                        <p>Employer</p>
+                                    </div>
+                                </div>
+                                <div className="col-sm-3">
+                                    <div className="why-item">
+                                        <div className="image">
+                                            <img src="/icons/courses.png" alt="candidates" />
+                                        </div>
+                                        <h3><CountUp end={500} />+</h3>
+                                        <p>Courses</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                {/* <section className="find-talents section-padding">
                     <div className="container">
                         <h1 className="section-title">Find Talents by <span>Category</span></h1>
                         <div className="row">
@@ -113,7 +221,9 @@ const Home = (props) => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
+
+
                 <section className="recent-jobs section-padding">
                     <div className="container">
                         <h1 className="section-title">Recent Jobs</h1>
@@ -215,6 +325,7 @@ const Home = (props) => {
                     </div>
                 </section>
 
+                
                 <section className="work-process section-padding">
                     <h1 className="section-title">How it Works</h1>
                     <div className="container">
@@ -249,54 +360,9 @@ const Home = (props) => {
                         </div>
                     </div>
                 </section>
+                
 
-                <section className="why-employment">
-                    <div className="overlay section-padding">
-                        <div className="container">
-                            <h1 className="section-title">Why Employment</h1>
-                            <div className="row">
-                                <div className="col-sm-3">
-                                    <div className="why-item">
-                                        <div className="image">
-                                            <img src="/icons/resources.png" alt="candidates" />
-                                        </div>
-                                        <h3><CountUp end={3000} />+</h3>
-                                        <p>Candidates</p>
-                                    </div>
-                                </div>
-                                <div className="col-sm-3">
-                                    <div className="why-item">
-                                        <div className="image">
-                                            <img src="/icons/jobs.png" alt="candidates" />
-                                        </div>
-                                        <h3><CountUp end={5000} />+</h3>
-                                        <p>Jobs</p>
-                                    </div>
-                                </div>
-                                <div className="col-sm-3">
-                                    <div className="why-item">
-                                        <div className="image">
-                                            <img src="/icons/businessman.png" alt="candidates" />
-                                        </div>
-                                        <h3><CountUp end={1000} />+</h3>
-                                        <p>Employer</p>
-                                    </div>
-                                </div>
-                                <div className="col-sm-3">
-                                    <div className="why-item">
-                                        <div className="image">
-                                            <img src="/icons/courses.png" alt="candidates" />
-                                        </div>
-                                        <h3><CountUp end={500} />+</h3>
-                                        <p>Courses</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="testimonial section-padding">
+                <section className="testimonial section-padding section-bg">
                     <h1 className="section-title">What Our Clients Says</h1>
                     <div className="container">
                         <div className="testimonials">

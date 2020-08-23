@@ -11,11 +11,11 @@ class Header extends React.Component {
                             <img src="/logo.jpeg" alt="logo" />
                         </div>
                         <ul className="menu">
-                            <li className="menu-item"><a href="#">Home</a></li>
+                            <li className="menu-item"><a href="#">About Us</a></li>
                             <li className="menu-item"><a href="#">Find Jobs</a></li>
                             <li className="menu-item"><a href="#">Employees</a></li>
                             <li className="menu-item"><a href="#">Services</a></li>
-                            <li className="menu-item">
+                            {/* <li className="menu-item">
                                 <button className="btn btn-green">Login | Register</button>
                                 <ul className="sub-menu auth">
                                     <li>
@@ -41,7 +41,7 @@ class Header extends React.Component {
                                         </div>
                                     </li>
                                 </ul>
-                            </li>
+                            </li> */}
                         </ul>
                         
                     </div>
