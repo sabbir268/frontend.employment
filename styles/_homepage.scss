@@ -1,22 +1,25 @@
 .home-banner{
-	height: 400px;
+	height: 500px;
 	background: url('/images/bg-shape-2.jpg');
 	background-position: center bottom;
 	background-size: cover;
 	.banner-content{
 		color: #fff;
 		background: linear-gradient(to left, rgba(85, 77, 160, .9), rgba(40, 167, 69, .9));
+		// background: rgba(0, 0, 0, .6);
 		height: 100%;
 		display: flex;
 		align-items: center;
 		h1{
-			font-size: 34px;
+			font-size: 60px;
+			line-height: 1.2;
 			margin-bottom: 0px;
 			color: #ffffff;
 		}
 		h2{
 			color: #ffffff;
 			text-transform: capitalize;
+			margin-bottom: 14px;
 			span{
 				color: $primary-color;
 			}
@@ -33,7 +36,7 @@
 					right: 6px;
 					top: 6px;
 					outline: none;
-					background: #554da0;
+					background: $green;
 					color: #fff;
 					border-radius: 0px 30px 30px 0px;
 					height: 47px;
@@ -55,6 +58,7 @@
 		.are-you{
 			margin-bottom: 0px;
 			font-weight: 700;
+			font-size: 18px;
 			a{
 				color: #ffffff;
 				text-decoration: underline;
@@ -63,8 +67,7 @@
 		.banner-box{
 			background: rgba(255, 255, 255, .4);
 			border-radius: 5px;
-			padding: 30px;
-			margin-bottom: 10px;
+			padding: 40px 30px;
 			position: absolute;
 			right: 0;
 			bottom: 25%;
@@ -74,21 +77,29 @@
 			opacity: 1;
 			transition: .4s ease-in-out;
 			.btn-default{
-				min-width: 160px;
+				min-width: 250px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				font-size: 18px;
+				font-weight: 700;
 			}
 			ul{
 				margin-top: 20px;
 				li{
 					list-style: none;
 					display: inline-block;
+					font-size: 18px;
 					&:first-child{
-						margin-right: 10px;
+						margin-right: 60px;
 					}
 					a{
 						color: #ffffff;
 						text-decoration: none;
 						&:hover{
 							color: $primary-color;
+						}
+						i:before{
+							font-size: 20px;
 						}
 					}
 				}
@@ -99,15 +110,14 @@
 			right: 24px;
 		}
 		.advance-button{
-			float: right;
+			position: absolute;
+			right: 0;
 			color: #fff;
 			cursor: pointer;
-			font-size: 12px;
+			font-size: 16px;
 			transition: .25s;
-		}
-		.search-button{
-			text-align: right;
-			transition: .35s;
+			margin-top: 20px;
+    		margin-right: 24px;
 		}
 		.main-button{
 			position: absolute;
@@ -159,6 +169,68 @@
 		}
 	}
 	
+}
+
+.hot-jobs{
+	.section-title{
+		margin-bottom: 30px;
+	}
+	.job-item{
+		background-color: #ffffff;
+		padding: 16px;
+		border-radius: 3px;
+		@include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.2));
+		@include transition(.35s);
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		// min-height: 130px;
+		.image{
+			background-color: #ffffff;
+			border: 1px solid $border-color;
+			border-radius: 3px;
+			margin-right: 10px;
+			padding: 5px;
+		}
+		.content{
+			h4{
+				font-size: 16px;
+				line-height: 1;
+				margin-bottom: 5px;
+				a{
+					color: $heading-color;
+					text-decoration: none;
+					// &:hover{
+					// 	color: $green;
+					// }
+				}
+			}
+			ul{
+				li{
+					list-style: none;
+					font-size: 13px;
+					line-height: 18px;
+					svg{
+						font-size: 13px;
+					}
+					a{
+						color: $text-color-light;
+						text-decoration: none;
+						// &:hover{
+						// 	color: $text-color;
+						// }
+					}
+				}
+			}
+		}
+		&:hover{
+			background-color: $green;
+			h4 a, ul li a{
+				color: #ffffff;
+			}
+		}
+
+	}
 }
 
 .top-categories{
@@ -326,6 +398,8 @@
 		text-align: center;
 		.icon-design{
 			margin: 0 auto 10px;
+			background-color: rgba($color: $primary-color, $alpha: .1);
+			color: $primary-color;
 		}
 	}
 }
@@ -420,6 +494,10 @@
 				font-size: 16px;
 				color: $text-color-light;
 				margin-left: 20px;
+				@include breakpoint(tablet){
+					display: block;
+   					margin-left: 0;
+				}
 			}
 		}
 		p{
@@ -428,27 +506,154 @@
 	}
 }
 
+.top-companies{
+	.company{
+		padding: 40px;
+		border-right: 1px solid $border-color;
+		text-align: center;
+		a{
+			display: block;
+		}
+		@include breakpoint(mobile){
+			padding: 20px;
+		}
+		@include breakpoint(sm-mobile){
+			border-right: none;
+			border-bottom: 1px solid $border-color;
+		}
+	}
+	.row > [class*=col-]:nth-child(-n+4){
+		.company{
+			border-bottom: 1px solid $border-color;
+		}
+	}
+	.row > [class*=col-]:nth-child(4){
+		.company{
+			border-right: none;
+		}
+	}
+	.row > [class*=col-]:last-child{
+		.company{
+			border-right: none;
+		}
+	}
+}
+
+.video{
+	text-align: center;
+	padding: 50px 0px;
+	margin-top: 50px;
+	a{
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		border-radius: 100%;
+		background-color: $primary-color;
+		color: #ffffff;
+		font-size: 30px;
+		line-height: 2.7;
+		position: relative;
+		svg{
+			margin-left: 5px;
+		}
+		&::before, &::after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: -1;
+			bottom: 0;
+			left: 0;
+			border-radius: 100%;
+			border: 1px solid $primary-color;
+			-webkit-transition: 0.5s;
+			transition: 0.5s;
+			-webkit-animation: ripple 2s linear infinite;
+          	animation: ripple 2s linear infinite;
+		}
+		&::after{
+			-webkit-animation: ripple 2s linear 1s infinite;
+          	animation: ripple 2s linear 1s infinite;
+		}
+	}
+}
+
+@-webkit-keyframes ripple {
+	0% {
+	  -webkit-transform: scale(1);
+			  transform: scale(1);
+	}
+	75% {
+	  -webkit-transform: scale(1.75);
+			  transform: scale(1.75);
+	  opacity: 1;
+	}
+	100% {
+	  -webkit-transform: scale(2);
+			  transform: scale(2);
+	  opacity: 0;
+	}
+}
+  
+  @keyframes ripple {
+	0% {
+	  -webkit-transform: scale(1);
+			  transform: scale(1);
+	}
+	75% {
+	  -webkit-transform: scale(1.75);
+			  transform: scale(1.75);
+	  opacity: 1;
+	}
+	100% {
+	  -webkit-transform: scale(2);
+			  transform: scale(2);
+	  opacity: 0;
+	}
+}
+
 .subscribe{
 	background-color: #6381a1;
 	padding: 60px 0px;
-	h3{
-		text-transform: uppercase;
-		color: #ffffff;
-		margin-bottom: 0px;
-		margin-top: 3px;
+	.content{
+		h3{
+			text-transform: uppercase;
+			color: #ffffff;
+			margin-bottom: 0px;
+			margin-top: 3px;
+			@include breakpoint(mini-mobile){
+				font-size: 22px;
+			}
+		}
+		p{
+			color: #dddddd;
+			margin-bottom: 0px;
+		}
+		.icon{
+			float: left;
+			color: #fff;
+			font-size: 40px;
+			margin-right: 20px;
+			margin-top: 10px;
+			@include breakpoint(mini-mobile){
+				margin-right: 10px;
+			}
+		}
+		@include breakpoint(desktop){
+			max-width: 330px;
+			margin: 0 auto 30px;
+		}
 	}
-	p{
-		color: #dddddd;
-		margin-bottom: 0px;
-	}
-	.icon{
-		float: left;
-		color: #fff;
-		font-size: 40px;
-		margin-right: 20px;
-		margin-top: 10px;
-	}
+	
 	form{
+		@include breakpoint(desktop){
+			max-width: 600px;
+			margin: auto;
+			@include breakpoint(sm-mobile){
+				text-align: center;
+			}
+		}
 		input{
 			width: calc(100% - 180px);
 			border: 1px solid #dddddd;
@@ -457,6 +662,10 @@
 			color: #dddddd;
 			outline: none;
 			margin-right: 20px;
+			@include breakpoint(sm-mobile){
+				width: 100%;
+				margin-bottom: 10px;
+			}
 		}
 		button{
 			background: #ffffff;

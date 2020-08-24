@@ -10,7 +10,7 @@ SwiperCore.use([Pagination]);
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLongArrowAltRight, faMapMarkerAlt, faFilter, faSuitcase, faBuilding, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowAltRight, faMapMarkerAlt, faFilter, faSuitcase, faBuilding, faQuoteRight, faAngleRight, faPlay } from '@fortawesome/free-solid-svg-icons';
 import { faClock, faBell } from '@fortawesome/free-regular-svg-icons';
 
 const Home = (props) => {
@@ -22,8 +22,245 @@ const Home = (props) => {
             </Head>
             <main className="homepage">
                 <BannerSearch />
-                
-                <section className="top-categories section-padding section-bg">
+
+                <section className="hot-jobs section-padding section-bg">
+                    <div className="container">
+                        <h1 className="section-title"><span>Premium</span> Job Search</h1>
+                        <div className="row sm-gutters">
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-4">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
+                                        <ul>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="text-center mt-2">
+                            <a href="#" className="btn btn-green">View All</a>
+                        </div>
+                    </div>
+                </section>
+
+                {/* <section className="top-categories section-padding section-bg">
                     <div className="container">
                         <h1 className="section-title">Top <span>Job</span> Categories</h1>
                         <div className="row">
@@ -80,7 +317,7 @@ const Home = (props) => {
                             <a href="#" className="btn btn-default">View More</a>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
 
                 <section className="why-employment">
@@ -224,7 +461,7 @@ const Home = (props) => {
                 </section> */}
 
 
-                <section className="recent-jobs section-padding">
+                {/* <section className="recent-jobs section-padding">
                     <div className="container">
                         <h1 className="section-title">Recent Jobs</h1>
                         <div className="job-list">
@@ -323,9 +560,9 @@ const Home = (props) => {
                             <a href="#" className="btn btn-default">View All</a>
                         </div>
                     </div>
-                </section>
+                </section> */}
 
-                
+
                 <section className="work-process section-padding">
                     <h1 className="section-title">How it Works</h1>
                     <div className="container">
@@ -333,7 +570,7 @@ const Home = (props) => {
                             <div className="col-sm-4">
                                 <div className="process-item">
                                     <div className="icon-design">
-                                        <img src="/icons/account.png" alt="account" />
+                                        <i className="flaticon-account"></i>
                                     </div>
                                     <h3>Create an Account</h3>
                                     <p>Gravida quis blandit turpis cursus in hac habitasse platea. Ut diam quam nulla porttitor.</p>
@@ -342,7 +579,7 @@ const Home = (props) => {
                             <div className="col-sm-4">
                                 <div className="process-item">
                                     <div className="icon-design">
-                                        <img src="/icons/search-jobs.png" alt="account" />
+                                        <i className="flaticon-job-search"></i>
                                     </div>
                                     <h3>Search Jobs</h3>
                                     <p>Gravida quis blandit turpis cursus in hac habitasse platea. Ut diam quam nulla porttitor.</p>
@@ -351,25 +588,40 @@ const Home = (props) => {
                             <div className="col-sm-4">
                                 <div className="process-item">
                                     <div className="icon-design">
-                                        <img src="/icons/piggy-bank.png" alt="account" />
+                                        <i className="flaticon-piggy-bank"></i>
                                     </div>
                                     <h3>Save & Apply</h3>
                                     <p>Gravida quis blandit turpis cursus in hac habitasse platea. Ut diam quam nulla porttitor.</p>
                                 </div>
                             </div>
                         </div>
+                        <div className="video">
+                            <a href="#"><FontAwesomeIcon icon={faPlay} /></a>
+                        </div>
                     </div>
                 </section>
-                
+
+                {/* <section className="video section-padding">
+                    <div className="container">
+                        <h1 className="section-title">Video</h1>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hwb4ozNE6w0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    </div>
+                </section> */}
 
                 <section className="testimonial section-padding section-bg">
-                    <h1 className="section-title">What Our Clients Says</h1>
                     <div className="container">
+                        <h1 className="section-title">What Our Clients Says</h1>
                         <div className="testimonials">
                             <Swiper
-                                spaceBetween={20}
-                                slidesPerView={2}
+                                slidesPerView={1}
+                                spaceBetween={0}
                                 pagination={{ clickable: true }}
+                                breakpoints={{
+                                    768: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20
+                                    }
+                                }}
                                 onSlideChange={() => console.log('slide change')}
                                 onSwiper={(swiper) => console.log(swiper)} >
                                 <SwiperSlide>
@@ -407,15 +659,82 @@ const Home = (props) => {
                     </div>
                 </section>
 
+                <section className="top-companies section-padding">
+                    <div className="container">
+                        <h1 className="section-title">Top Hiring Companies</h1>
+                        <div className="row no-gutters">
+                            <div className="col-sm-3">
+                                <div className="company">
+                                    <a href="#">
+                                        <img src="/images/companies/1.png" alt="company" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="company">
+                                    <a href="#">
+                                        <img src="/images/companies/2.png" alt="company" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="company">
+                                    <a href="#">
+                                        <img src="/images/companies/3.png" alt="company" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="company">
+                                    <a href="#">
+                                        <img src="/images/companies/4.png" alt="company" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="company">
+                                    <a href="#">
+                                        <img src="/images/companies/5.png" alt="company" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="company">
+                                    <a href="#">
+                                        <img src="/images/companies/6.png" alt="company" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="company">
+                                    <a href="#">
+                                        <img src="/images/companies/7.png" alt="company" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="company">
+                                    <a href="#">
+                                        <img src="/images/companies/8.png" alt="company" />
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
                 <section className="subscribe">
                     <div className="container">
                         <div className="row">
-                            <div className="col-sm-4">
-                                <FontAwesomeIcon icon={faBell} className="icon" />
-                                <h3>Get Job Notifications</h3>
-                                <p>Free Subscribe Our Newsletter Now!</p>
+                            <div className="col-md-12 col-xl-4">
+                                <div className="content">
+                                    <FontAwesomeIcon icon={faBell} className="icon" />
+                                    <h3>Get Job Notifications</h3>
+                                    <p>Free Subscribe Our Newsletter Now!</p>
+                                </div>
                             </div>
-                            <div className="col-sm-8">
+                            <div className="col-md-12 col-xl-8">
                                 <form>
                                     <input type="text" name="subscribe" placeholder="Enter Your Email" />
                                     <button>Submit</button>
