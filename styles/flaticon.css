@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 23/08/2020 06:41
+  	Creation date: 25/08/2020 06:37
   	*/
 
 @font-face {
@@ -27,6 +27,7 @@
   font-family: Flaticon;
         font-size: 24px;
 font-style: normal;
+/* margin-left: 20px; */
 }
 
 .flaticon-profits:before { content: "\f100"; }
@@ -43,3 +44,12 @@ font-style: normal;
 .flaticon-login:before { content: "\f10b"; }
 .flaticon-login-1:before { content: "\f10c"; }
 .flaticon-remove:before { content: "\f10d"; }
+.flaticon-human-resources:before { content: "\f10e"; }
+.flaticon-interview:before { content: "\f10f"; }
+.flaticon-man:before { content: "\f110"; }
+.flaticon-businessman:before { content: "\f111"; }
+.flaticon-training:before { content: "\f112"; }
+.flaticon-online-learning:before { content: "\f113"; }
+.flaticon-suitcase:before { content: "\f114"; }
+.flaticon-businessman-1:before { content: "\f115"; }
+.flaticon-web:before { content: "\f116"; }

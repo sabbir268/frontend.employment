@@ -327,8 +327,9 @@ const Home = (props) => {
                             <div className="row">
                                 <div className="col-sm-3">
                                     <div className="why-item">
-                                        <div className="image">
-                                            <img src="/icons/resources.png" alt="candidates" />
+                                        <div className="image icon-design">
+                                            {/* <img src="/icons/resources.png" alt="candidates" /> */}
+                                            <i className="flaticon-human-resources"></i>
                                         </div>
                                         <h3><CountUp end={3000} />+</h3>
                                         <p>Candidates</p>
@@ -336,8 +337,9 @@ const Home = (props) => {
                                 </div>
                                 <div className="col-sm-3">
                                     <div className="why-item">
-                                        <div className="image">
-                                            <img src="/icons/jobs.png" alt="candidates" />
+                                        <div className="image icon-design">
+                                            {/* <img src="/icons/jobs.png" alt="candidates" /> */}
+                                            <i className="flaticon-suitcase"></i>
                                         </div>
                                         <h3><CountUp end={5000} />+</h3>
                                         <p>Jobs</p>
@@ -345,8 +347,9 @@ const Home = (props) => {
                                 </div>
                                 <div className="col-sm-3">
                                     <div className="why-item">
-                                        <div className="image">
-                                            <img src="/icons/businessman.png" alt="candidates" />
+                                        <div className="image icon-design">
+                                            {/* <img src="/icons/businessman.png" alt="candidates" /> */}
+                                            <i className="flaticon-businessman-1"></i>
                                         </div>
                                         <h3><CountUp end={1000} />+</h3>
                                         <p>Employer</p>
@@ -354,8 +357,9 @@ const Home = (props) => {
                                 </div>
                                 <div className="col-sm-3">
                                     <div className="why-item">
-                                        <div className="image">
-                                            <img src="/icons/courses.png" alt="candidates" />
+                                        <div className="image icon-design">
+                                            {/* <img src="/icons/courses.png" alt="candidates" /> */}
+                                            <i className="flaticon-web"></i>
                                         </div>
                                         <h3><CountUp end={500} />+</h3>
                                         <p>Courses</p>

@@ -1,0 +1,25 @@
+.job-list-page{
+    .job-filter{
+        background-color: #ffffff;
+        @include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.2));
+        border-radius: 4px;
+        padding: 20px;
+        margin-bottom: 20px;
+        p{
+            margin-bottom: 0px;
+        }
+        .form-group{
+            margin-bottom: 0px;
+            text-align: right;
+            span{
+                margin-right: 10px;
+            }
+            select{
+                border-color: $border-color;
+                color: $text-color;
+                padding: 3px 5px;
+                outline: none;
+            }
+        }
+    }
+}
