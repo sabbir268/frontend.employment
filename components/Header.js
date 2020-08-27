@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 class Header extends React.Component {
 
@@ -8,11 +9,11 @@ class Header extends React.Component {
                 <div className="container">
                     <div className="header-menu">
                         <div className="header-logo">
-                            <img src="/logo.jpeg" alt="logo" />
+                            <Link href="/"><a><img src="/logo.jpeg" alt="logo" /></a></Link>
                         </div>
                         <ul className="menu">
                             <li className="menu-item"><a href="#">About Us</a></li>
-                            <li className="menu-item"><a href="#">Find Jobs</a></li>
+                            <li className="menu-item"><Link href="/jobs"><a>Find Jobs</a></Link></li>
                             <li className="menu-item"><a href="#">Employees</a></li>
                             <li className="menu-item"><a href="#">Services</a></li>
                             {/* <li className="menu-item">

@@ -26,13 +26,8 @@
 
 .job-details-page{
     .job-details{
-        // background: #ffffff;
-        // padding: 20px;
-        // border-radius: 5px;
-        // @include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.2));
         .detail-top{
             display: flex;
-            // align-items: center;
             padding-bottom: 20px;
             border-bottom: 1px solid $border-color;
             position: relative;
@@ -66,44 +61,6 @@
                     bottom: 16px;
                     right: 3px;
                 }
-                .social-share {
-                    position: absolute;
-                    top: 5px;
-                    right: 0px;
-                    ul{
-                        li{
-                            list-style: none;
-                            display: inline-block;
-                            margin-right: 5px;
-                            a{
-                                display: inline-block;
-                                text-align: center;
-                                background-color: $primary-color;
-                                color: #fff;
-                                font-size: 14px;
-                                height: 30px;
-                                width: 30px;
-                                line-height: 2.3;
-                                border-radius: 100%;
-                            }
-                            &.facebook a{
-                                background-color: $facebook;
-                            }
-                            &.google a{
-                                background-color: $google;
-                            }
-                            &.linkedin a{
-                                background-color: $linkedin;
-                            }
-                            &.twitter a{
-                                background-color: $twitter;
-                            }
-                            &.pinterest a{
-                                background-color: $pinterest;
-                            }
-                        }
-                    }
-                }
             }
         }
         .detail-body{
@@ -119,7 +76,40 @@
                 li{
                     margin-left: 30px;
                     line-height: 26px;
-                    // font-size: 14px;
+                }
+            }
+        }
+        .apply-bottom{
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            .btn{
+                min-width: 160px;
+                margin-bottom: 10px;
+            }
+            p{
+                margin: 0px;
+                padding: 0px;
+                line-height: 26px;
+                strong{
+                    color: $green;
+                }
+            }
+        }
+    }
+    .company-information{
+        border-top: 1px solid $border-color;
+        padding-top: 10px;
+        h4{
+            font-size: 18px;
+            margin-bottom: 0px;
+        }
+        ul{
+            li{
+                list-style: none;
+                line-height: 26px;
+                a{
+                    color: $green;
                 }
             }
         }
@@ -128,6 +118,11 @@
         border: 1px solid $border-color;
         margin-top: 30px;
         padding: 20px;
+        h4{
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
         ul{
             li{
                 display: flex;
@@ -148,12 +143,17 @@
                     font-size: 14px;
                 }
                 strong{
-                    font-size: 16px;
+                    font-size: 15px;
                     display: block;
                     font-weight: 500;
                     margin-right: 5px;
                 }
             }
         }
+    }
+    .social-share {
+        text-align: center;
+        margin-top: 30px;
+        
     }
 }

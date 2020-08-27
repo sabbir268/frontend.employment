@@ -11,7 +11,7 @@ const JobDetails = (props) => {
             <div className="job-details-page section-padding">
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm-9">
+                        <div className="col-sm-8">
                             <div className="job-details">
                                 <div className="detail-top">
                                     <div className="image">
@@ -25,7 +25,7 @@ const JobDetails = (props) => {
                                             {/* <li>Vacancy: Not specific</li> */}
                                         </ul>
                                         <p className="deadline">Deadline: 20 Sep 2020</p>
-                                        <div className="social-share">
+                                        {/* <div className="social-share">
                                             <ul>
                                                 <li className="facebook"><a href="#"><FontAwesomeIcon icon={faFacebookF} /></a></li>
                                                 <li className="google"><a href="#"><FontAwesomeIcon icon={faGoogle} /></a></li>
@@ -33,7 +33,7 @@ const JobDetails = (props) => {
                                                 <li className="twitter"><a href="#"><FontAwesomeIcon icon={faTwitter} /></a></li>
                                                 <li className="pinterest"><a href="#"><FontAwesomeIcon icon={faPinterest} /></a></li>
                                             </ul>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                                 <div className="detail-body">
@@ -74,12 +74,37 @@ const JobDetails = (props) => {
                                         <li>The applicants should have computer literacy in MS words, MS Excel and accounting software is a must.</li>
                                         <li>The applicants should have good team player.</li>
                                     </ul>
+
+                                    <div className="apply-bottom">
+                                        <button className="btn btn-green">Apply Online</button>
+                                        <p>Or</p>
+                                        <p>Send your CV to hr@example.com</p>
+                                        <p><strong>Application Deadline: </strong>20 Sep 2020</p>
+                                    </div>
+                                </div>
+                                <div className="company-information">
+                                    <h4>Walton Group</h4>
+                                    <ul>
+                                        <li><strong>Address: </strong>Dhaka, Bangladesh</li>
+                                        <li><strong>Profile: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt est eget dignissim placerat. Nulla lacinia hendrerit rutrum. Aliquam ornare finibus nisi in efficitur. Sed ut lacinia magna. Phasellus tristique ligula leo, in blandit ipsum lacinia sit amet. Mauris magna turpis, lobortis sed aliquet id, ultrices id erat.</li>
+                                        <li><strong>Website: </strong><a href="#">www.example.com</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-3">
+                        <div className="col-sm-4">
                             <div className="sidebar">
                                 <a href="#" className="btn btn-default d-block">Apply</a>
+                                <div className="social-share">
+                                    <ul className="social-icons">
+                                        <li className="facebook"><a href="#"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+                                        <li className="google"><a href="#"><FontAwesomeIcon icon={faGoogle} /></a></li>
+                                        <li className="linkedin"><a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
+                                        <li className="twitter"><a href="#"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                                        <li className="pinterest"><a href="#"><FontAwesomeIcon icon={faPinterest} /></a></li>
+                                    </ul>
+                                </div>
+                                
                                 <div className="job-overview">
                                     <h4>Job Overview</h4>
                                     <ul>

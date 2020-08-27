@@ -249,6 +249,40 @@ label{
 	}
 }
 
+ul.social-icons{
+	li{
+		list-style: none;
+		display: inline-block;
+		margin-right: 5px;
+		a{
+			display: inline-block;
+			text-align: center;
+			background-color: $primary-color;
+			color: #fff;
+			font-size: 14px;
+			height: 30px;
+			width: 30px;
+			line-height: 2.3;
+			border-radius: 100%;
+		}
+		&.facebook a{
+			background-color: $facebook;
+		}
+		&.google a{
+			background-color: $google;
+		}
+		&.linkedin a{
+			background-color: $linkedin;
+		}
+		&.twitter a{
+			background-color: $twitter;
+		}
+		&.pinterest a{
+			background-color: $pinterest;
+		}
+	}
+}
+
 .transition-3{
 	@include transition(3s);
 }

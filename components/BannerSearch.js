@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { set } from 'js-cookie';
 
 class BannerSearch extends React.Component {
@@ -36,7 +37,7 @@ class BannerSearch extends React.Component {
                                                 {!this.state.advanceSearch && <button type="submit"><i className="flaticon-magnifying-glass"></i></button>}
                                                 {!this.state.advanceSearch && <p onClick={this.showAdavanceSearch} className="advance-button">Advance Search</p>}
                                             </div>
-                                            <p className="are-you"><a href="#">Are you Hiring? Post a Job Now.</a></p>
+                                            <p className="are-you"><Link href="/auth/register"><a href="#">Are you Hiring? Post a Job Now.</a></Link></p>
                                         </div>
                                         {this.state.advanceSearch &&
                                             <>
@@ -68,10 +69,10 @@ class BannerSearch extends React.Component {
                                         }
 
                                         <div className="banner-box fade-in">
-                                            <a href="#" className="btn btn-default">Drop Your CV</a>
+                                            <Link href="/jobseeker/register"><a className="btn btn-default">Drop Your CV</a></Link>
                                             <ul>
-                                                <li><a href="#"><i className="flaticon-account"></i> Sign Up</a></li>
-                                                <li><a href="#"><i className="flaticon-login"></i> Sign In</a></li>
+                                                <li><Link href="/jobseeker/login"><a><i className="flaticon-account"></i> Sign Up</a></Link></li>
+                                                <li><Link href="/jobseeker/register"><a><i className="flaticon-login"></i> Sign In</a></Link></li>
                                             </ul>
                                         </div>
 
