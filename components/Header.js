@@ -16,7 +16,7 @@ class Header extends React.Component {
                             <li className="menu-item"><Link href="/jobs"><a>Find Jobs</a></Link></li>
                             <li className="menu-item"><a href="#">Employees</a></li>
                             <li className="menu-item"><a href="#">Services</a></li>
-                            {/* <li className="menu-item">
+                            <li className="menu-item">
                                 <button className="btn btn-green">Login | Register</button>
                                 <ul className="sub-menu auth">
                                     <li>
@@ -33,16 +33,16 @@ class Header extends React.Component {
                                     <li>
                                         <div className="image"><img src="/icons/contract.png" alt="candidate" /></div>
                                         <div>
-                                            <h3>Candidate</h3>
+                                            <h3>Jobseeker</h3>
                                             <p>Login or Register to grab the best opportunity</p>
                                             <div className="buttons">
-                                                <a href="#">Login</a>
-                                                <a href="#">Register</a>
+                                                <a href="/jobseeker/login">Login</a>
+                                                <a href="jobseeker/register">Register</a>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
-                            </li> */}
+                            </li>
                         </ul>
                         
                     </div>

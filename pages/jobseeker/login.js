@@ -25,7 +25,7 @@ class CandidateLogin extends React.Component {
                             </div>
                             <div className="col-sm-6">
                                 <div className="login-form">
-                                    <h2 className="text-center mb-3">Candidate Login</h2>
+                                    <h2 className="text-center mb-3">Jobseeker Login</h2>
                                     <form>
                                         <div className="form-group">
                                             <input type="email" placeholder="E-mail Address *" className="form-control" />
@@ -48,7 +48,7 @@ class CandidateLogin extends React.Component {
                                     </div>
                                     <div className="not-have">
                                         <p>Don't have an account?</p>
-                                        <Link href="/candidate/register"><a className="btn btn-black">Register Here</a></Link>
+                                        <Link href="/jobseeker/register"><a className="btn btn-black">Register Here</a></Link>
                                     </div>
                                 </div>
                             </div>

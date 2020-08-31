@@ -71,8 +71,8 @@ class BannerSearch extends React.Component {
                                         <div className="banner-box fade-in">
                                             <Link href="/jobseeker/register"><a className="btn btn-default">Drop Your CV</a></Link>
                                             <ul>
-                                                <li><Link href="/jobseeker/login"><a><i className="flaticon-account"></i> Sign Up</a></Link></li>
-                                                <li><Link href="/jobseeker/register"><a><i className="flaticon-login"></i> Sign In</a></Link></li>
+                                                <li><Link href="/jobseeker/register"><a><i className="flaticon-account"></i> Sign Up</a></Link></li>
+                                                <li><Link href="/jobseeker/login"><a><i className="flaticon-login"></i> Sign In</a></Link></li>
                                             </ul>
                                         </div>
 

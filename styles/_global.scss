@@ -102,16 +102,20 @@ label{
 		height: 7px;
 		width: 7px;
 		border-right: 1px solid #333333;
-		border-top: 1px solid #333333;
+		border-bottom: 1px solid #333333;
 		top: 14px;
 		right: 14px;
 		position: absolute;
-		transform: rotate(135deg);
+		@include transform(rotate(45deg));
+		// transform: rotate(45deg);
 		z-index: 1;
 	}
 	&.label:before{
 		top: 44px;
 	}
+}
+.react-datepicker-wrapper{
+	width: 100%;
 }
 .pagination{
 	.page-item.active{

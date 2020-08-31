@@ -143,6 +143,10 @@ const JobDetails = (props) => {
                                         
                                     </ul>
                                 </div>
+                                
+                                <div className="job-video mt-4">
+                                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/5L4DQfVIcdg" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
