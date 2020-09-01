@@ -37,7 +37,7 @@ class Header extends React.Component {
                                             <p>Login or Register to grab the best opportunity</p>
                                             <div className="buttons">
                                                 <a href="/jobseeker/login">Login</a>
-                                                <a href="jobseeker/register">Register</a>
+                                                <a href="/jobseeker/register">Register</a>
                                             </div>
                                         </div>
                                     </li>

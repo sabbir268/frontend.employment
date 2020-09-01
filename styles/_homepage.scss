@@ -511,6 +511,24 @@
 	}
 }
 
+.video-testimonial{
+	.swiper-container{
+		padding-bottom: 50px;
+		.swiper-pagination{
+			.swiper-pagination-bullet{
+				height: 12px;
+				width: 12px;
+				&:focus{
+					border: none;
+				}
+			}
+			.swiper-pagination-bullet-active{
+				background-color: $primary-color;
+			}
+		}
+	}
+}
+
 .top-companies{
 	.company{
 		padding: 40px;

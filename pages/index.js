@@ -612,56 +612,16 @@ const Home = (props) => {
                     </div>
                 </section> */}
 
-                <section className="testimonial section-padding section-bg">
+
+                <section className=" section-padding">
                     <div className="container">
                         <h1 className="section-title">What Our Clients Says</h1>
-                        <div className="testimonials">
-                            <Swiper
-                                slidesPerView={1}
-                                spaceBetween={0}
-                                pagination={{ clickable: true }}
-                                breakpoints={{
-                                    768: {
-                                        slidesPerView: 2,
-                                        spaceBetween: 20
-                                    }
-                                }}
-                                onSlideChange={() => console.log('slide change')}
-                                onSwiper={(swiper) => console.log(swiper)} >
-                                <SwiperSlide>
-                                    <div className="testimonial-item">
-                                        <div className="image">
-                                            <img src="/images/clients/1.jpg" alt="client" />
-                                        </div>
-                                        <FontAwesomeIcon icon={faQuoteRight} className="icon" />
-                                        <h3>Babriel Nolan <span>CEO</span></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="testimonial-item">
-                                        <div className="image">
-                                            <img src="/images/clients/2.jpg" alt="client" />
-                                        </div>
-                                        <FontAwesomeIcon icon={faQuoteRight} className="icon" />
-                                        <h3>Olivia Reynolds <span>Software Engineers</span></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
-                                    </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="testimonial-item">
-                                        <div className="image">
-                                            <img src="/images/clients/3.jpg" alt="client" />
-                                        </div>
-                                        <FontAwesomeIcon icon={faQuoteRight} className="icon" />
-                                        <h3>Rosie Marshall <span>Photograph</span></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
-                                    </div>
-                                </SwiperSlide>
-                            </Swiper>
+                        <div className="text-center">
+                            <iframe width="900" height="500" src="https://www.youtube.com/embed/GXI0l3yqBrA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                     </div>
                 </section>
+
 
                 <section className="top-companies section-padding">
                     <div className="container">
@@ -724,6 +684,66 @@ const Home = (props) => {
                                 </div>
                             </div>
 
+                        </div>
+                    </div>
+                </section>
+
+                <section className="testimonial section-padding section-bg">
+                    <div className="container">
+                        <h1 className="section-title">JobSeekers Says</h1>
+                        <div className="testimonials">
+                            <Swiper
+                                slidesPerView={1}
+                                spaceBetween={0}
+                                pagination={{ clickable: true }}
+                                breakpoints={{
+                                    768: {
+                                        slidesPerView: 2,
+                                        spaceBetween: 20
+                                    }
+                                }}
+                                onSlideChange={() => console.log('slide change')}
+                                onSwiper={(swiper) => console.log(swiper)} >
+                                <SwiperSlide>
+                                    <div className="testimonial-item">
+                                        <div className="image">
+                                            <img src="/images/clients/1.jpg" alt="client" />
+                                        </div>
+                                        <FontAwesomeIcon icon={faQuoteRight} className="icon" />
+                                        <h3>Babriel Nolan <span>CEO</span></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="testimonial-item">
+                                        <div className="image">
+                                            <img src="/images/clients/2.jpg" alt="client" />
+                                        </div>
+                                        <FontAwesomeIcon icon={faQuoteRight} className="icon" />
+                                        <h3>Olivia Reynolds <span>Software Engineers</span></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                    </div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div className="testimonial-item">
+                                        <div className="image">
+                                            <img src="/images/clients/3.jpg" alt="client" />
+                                        </div>
+                                        <FontAwesomeIcon icon={faQuoteRight} className="icon" />
+                                        <h3>Rosie Marshall <span>Photograph</span></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                    </div>
+                                </SwiperSlide>
+                            </Swiper>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="advice section-padding">
+                    <div className="container">
+                        <h1 className="section-title">Career Advice</h1>
+                        <div className="text-center">
+                            <iframe width="900" height="500" src="https://www.youtube.com/embed/GXI0l3yqBrA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                     </div>
                 </section>
