@@ -23,6 +23,98 @@ const Home = (props) => {
             <main className="homepage">
                 <BannerSearch />
 
+                <section className="build-team section-padding">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm-7">
+                                <h2 >Build Your Team on Demand</h2>
+                                <p className="title-text">Quickly assemble the teams you need, exactly when you need them.</p>
+                                <div className="row">
+                                    <div className="col-sm-6">
+                                        <div className="expertise">
+                                            <div className="icon-design">
+                                                <i className="flaticon-profits"></i>
+                                            </div>
+                                            <h3>Finance Experts</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6">
+                                        <div className="expertise">
+                                            <div className="icon-design">
+                                                <i className="flaticon-bank"></i>
+                                            </div>
+                                            <h3>Commercial</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6">
+                                        <div className="expertise">
+                                            <div className="icon-design">
+                                                <i className="flaticon-group"></i>
+                                            </div>
+                                            <h3>Managers</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
+                                        </div>
+                                    </div>
+                                    <div className="col-sm-6">
+                                        <div className="expertise">
+                                            <div className="icon-design">
+                                                <i className="flaticon-artificial-intelligence"></i>
+                                            </div>
+                                            <h3>Engineers</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu laoreet orci. Maecenas lorem nisi, maximus ac urna ut.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-5">
+                                <div className="team-members">
+                                    <div className="member">
+                                        <div className="image">
+                                            <img src="/images/team-3.jpg" alt="candidate" />
+                                        </div>
+                                        <div className="content">
+                                            <h4><a href="#">Jessica Jung</a></h4>
+                                            <p>Financial Expert</p>
+                                            <span>Previously at</span>
+                                            <div className="company-logo">
+                                                <img src="/images/logos/microsoft.svg" alt="company" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="member">
+                                        <div className="image">
+                                            <img src="/images/team-2.jpg" alt="candidate" />
+                                        </div>
+                                        <div className="content">
+                                            <h4><a href="#">John Due</a></h4>
+                                            <p>Project Manager</p>
+                                            <span>Previously at</span>
+                                            <div className="company-logo">
+                                                <img src="/images/logos/yahoo.svg" alt="company" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="member">
+                                        <div className="image">
+                                            <img src="/images/team-1.jpg" alt="candidate" />
+                                        </div>
+                                        <div className="content">
+                                            <h4><a href="#">Justin Michela</a></h4>
+                                            <p>Software Enginner</p>
+                                            <span>Previously at</span>
+                                            <div className="company-logo">
+                                                <img src="/images/logos/shopify.svg" alt="company" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section className="hot-jobs section-padding section-bg">
                     <div className="container">
                         <h1 className="section-title"><span>Premium</span> Job Search</h1>

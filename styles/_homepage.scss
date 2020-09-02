@@ -171,6 +171,81 @@
 	
 }
 
+.build-team{
+	h2{
+		font-size: 32px;
+		text-transform: uppercase;
+		margin-bottom: 0px;
+		margin-top: 50px;
+	}
+	.title-text{
+		margin-bottom: 80px;
+	}
+	.expertise{
+		margin-bottom: 80px;
+		h3{
+			font-weight: 400;
+		}
+		.icon-design{
+			height: 60px;
+			width: 60px;
+			line-height: 2;
+			margin-bottom: 30px;
+		}
+	}
+	.team-members{
+		.member{
+			position: absolute;
+			width: 240px;
+			background: #ffffff;
+			@include box-shadow(0 4px 8px 0 rgba(0,0,0,.08));
+			z-index: 1;
+			&:hover{
+				z-index: 9;
+			}
+			&:nth-child(1){
+				right: 260px;
+				top: 200px;
+			}
+			&:nth-child(2){
+				right: 40px;
+				top: 0;
+			}
+			&:nth-child(3){
+				right: 0;
+				top: 400px;
+			}
+			.content{
+				padding: 20px;
+				h4{
+					font-weight: 700;
+					font-size: 18px;
+					line-height: 1;
+					margin-bottom: 5px;
+					a{
+						color: $primary-color;
+						text-decoration: none;
+					}
+				}
+				p{
+					margin-bottom: 0px;
+					line-height: 1;
+					font-size: 14px;
+				}
+				span{
+					display: block;
+					margin-top: 10px;
+					margin-bottom: 5px;
+					font-size: 13px;
+				}
+				.company-logo{
+					max-width: 120px;
+				}
+			}
+		}
+	}
+}
+
 .hot-jobs{
 	.section-title{
 		margin-bottom: 30px;
@@ -405,6 +480,9 @@
 			margin: 0 auto 10px;
 			background-color: rgba($color: $primary-color, $alpha: .1);
 			color: $primary-color;
+		}
+		h3{
+			font-weight: 400;
 		}
 	}
 }
