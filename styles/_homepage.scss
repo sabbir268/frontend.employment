@@ -415,64 +415,6 @@
 	}
 }
 
-.job-list{
-	.job-item{
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		background-color: #fff;
-		padding: 20px;
-		border-radius: 5px;
-		margin-bottom: 20px;
-		@include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.2));
-		position: relative;
-		.logo{
-			max-width: 100px;
-			border: 1px solid $border-color;
-			padding: 10px;
-			margin-right: 20px;
-		}
-		.content{
-			flex-grow: 1;
-			h3{
-				font-size: 20px;
-				line-height: 1;
-				margin-bottom: 5px;
-				a{
-					color: #333333;
-					text-decoration: none;
-				}
-			}
-			ul{
-				li{
-					list-style: none;
-					margin-right: 14px;
-					color: $text-color-light;
-					svg{
-						font-size: 13px;
-						width: 20px;
-					}
-					a{
-						color: $primary-color;
-						text-decoration: none;
-						font-weight: 600;
-					}
-				}
-			}
-		}
-		.deadline{
-			position: absolute;
-			right: 20px;
-			bottom: 20px;
-			font-weight: 500;
-			p{
-				margin-bottom: 0px;
-				color: $green;
-			}
-		}
-	}
-}
-
 .work-process{
 	.process-item{
 		text-align: center;

@@ -25,8 +25,8 @@ class Header extends React.Component {
                                             <h3>Employer</h3>
                                             <p>Login or Register to find the best candidate</p>
                                             <ul className="buttons">
-                                                <a href="#">Login</a>
-                                                <a href="#">Register</a>
+                                                <Link href="/employer/login"><a>Login</a></Link>
+                                                <Link href="/employer/register"><a>Register</a></Link>
                                             </ul>
                                         </div>
                                     </li>
@@ -36,15 +36,15 @@ class Header extends React.Component {
                                             <h3>Jobseeker</h3>
                                             <p>Login or Register to grab the best opportunity</p>
                                             <div className="buttons">
-                                                <a href="/jobseeker/login">Login</a>
-                                                <a href="/jobseeker/register">Register</a>
+                                                <Link href="/jobseeker/login"><a>Login</a></Link>
+                                                <Link href="/jobseeker/register"><a>Register</a></Link>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
-                        
+
                     </div>
                 </div>
             </header>

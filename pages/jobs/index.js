@@ -48,7 +48,7 @@ const Jobs = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className="job-list section-padding section-bg">
+                <div className="job-list section-padding">
                     <div className="container">
                         <div className="row sm-gutters">
                             <div className="col-sm-3">

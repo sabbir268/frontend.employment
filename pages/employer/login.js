@@ -40,6 +40,7 @@ class EmployerLogin extends React.Component {
                                         <li>Get the right candidate in the fastest way.</li>
                                         <li>Post a Job to the largest community.</li>
                                         <li>Easy and Advance search system.</li>
+                                        <li>Job alert emails delivered to candidates.</li>
                                         <li>And Many More.</li>
                                     </ul>
                                 </div>

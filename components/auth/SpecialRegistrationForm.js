@@ -14,32 +14,53 @@ class SpecialRegistrationForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            
+            full_name: '',
+            gender: '',
+            dob: '',
+            country: '',
+            nid: '',
+            phone: '',
+            skill: ''
         }
     }
 
+    handleChange = (e) => {
+        const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+        this.setState({
+            [e.target.name]: value
+        })
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log('submited')
+    }
+
     render() {
+        const {full_name, gender, dob, country, nid, phone, skill } = this.state;
+
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <p className="example">ড্রাইভার, সিকিরিউটি গার্ড, শেফ/বাবুর্চী, পিয়ন</p>
                 <div className="row sm-gutters">
                     <div className="col-sm-6">
                         <div className="form-group">
-                            <input type="text" name="name" placeholder="আপনার নাম" className="form-control" />
+                            <input type="text" name="full_name" value={full_name} onChange={this.handleChange} placeholder="আপনার নাম" className="form-control" />
                         </div>
                     </div>
                     <div className="col-sm-6">
-                        <div className="form-group gander">
+                        <div className="form-group gender">
                             <span>নিঙ্গ:</span>
-                            <input type="radio" name="gender" id="male" value="Male" /> <label htmlFor="male">পুরুষ</label>
-                            <input type="radio" name="gender" id="female" value="Female" /> <label htmlFor="female">মহিলা</label>
-                            <input type="radio" name="gender" id="other" value="Other" /> <label htmlFor="other">অন্যান্য</label>
+                            <input type="radio" name="gender" id="male" value="Male" checked={gender === 'Male'} onChange={this.handleChange} /> <label htmlFor="male">পুরুষ</label>
+                            <input type="radio" name="gender" id="female" value="Female" checked={gender === 'Female'} onChange={this.handleChange} /> <label htmlFor="female">মহিলা</label>
+                            <input type="radio" name="gender" id="other" value="Other" checked={gender === 'Other'} onChange={this.handleChange} /> <label htmlFor="other">অন্যান্য</label>
                         </div>
                     </div>
                     <div className="col-sm-6">
                         <DatePicker
-                            selected={this.state.startDate}
-                            onChange={this.handleChange}
+                            selected={dob}
+                            onChange={(dob) => {this.setState({dob: dob})}}
                             showMonthDropdown
                             showYearDropdown
                             className="form-control"
@@ -48,7 +69,7 @@ class SpecialRegistrationForm extends React.Component {
                     </div>
                     <div className="col-sm-6">
                         <div className="form-group select">
-                            <select name="country" className="form-control">
+                            <select name="country" value={country} onChange={this.handleChange} className="form-control">
                                 <option>দেশ নির্বাচন করুন</option>
                                 {
                                     Countries.map(country =>
@@ -60,28 +81,27 @@ class SpecialRegistrationForm extends React.Component {
                     </div>
                     <div className="col-sm-6">
                         <div className="form-group">
-                            <input type="text" name="nid" placeholder="এনআইডি নম্বার" className="form-control" />
+                            <input type="text" name="nid" value={nid} onChange={this.handleChange} placeholder="এনআইডি নম্বার" className="form-control" />
                         </div>
                     </div>
                     <div className="col-sm-6">
                         <div className="form-group">
                             <PhoneInput
                                 country={'bd'}
-                                value={this.state.phone}
-                                onChange={phone => this.setState({ phone })}
+                                value={phone}
+                                onChange={(phone) => {this.setState({phone: phone})}}
                                 inputClass="form-control"
                             />
                         </div>
                     </div>
                     <div className="col-sm-6">
                         <div className="form-group select">
-                            <select name="category" className="form-control">
-                                <option>দক্ষতা নির্বাচন করুন</option>
-                                <option>Industry</option>
-                                <option>Education</option>
-                                <option>Real State/Developers</option>
-                                <option>Information Technology</option>
-                                <option>Garments/Textile</option>
+                            <select name="skill" value={skill} onChange={this.handleChange} className="form-control">
+                                <option value="">দক্ষতা নির্বাচন করুন</option>
+                                <option>ড্রাইভার</option>
+                                <option>সিকিরিউটি গার্ড</option>
+                                <option>শেফ/বাবুর্চী</option>
+                                <option>পিয়ন</option>
                             </select>
                         </div>
                     </div>
@@ -91,9 +111,9 @@ class SpecialRegistrationForm extends React.Component {
                         </div>
                     </div>
                 </div>
-                {/* <div className="already-have">
+                <div className="already-have">
                     <p>Already have an Account? <Link href="/jobseeker/login"><a>Login</a></Link></p>
-                </div> */}
+                </div>
             </form>
         )
     }

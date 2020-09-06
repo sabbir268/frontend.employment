@@ -3,41 +3,51 @@ import Layout from '../../components/Layout';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGoogle, faLinkedinIn, faTwitter, faPinterest } from '@fortawesome/free-brands-svg-icons';
-import { faMapMarkerAlt, faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faBriefcase, faBuilding, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 const JobDetails = (props) => {
     return (
         <Layout>
-            <div className="job-details-page section-padding">
+            <div className="job-details-page mb-5">
                 <div className="container">
+                    <div className="detail-top">
+                        <div className="row align-items-center">
+                            <div className="col-sm-8">
+                                <div className="image">
+                                    <img src="/images/logos/walton.jpg" alt="logo" />
+                                </div>
+                                <div className="content">
+                                    <h3>Commerce Marketing Manager</h3>
+                                    <ul className="top-points">
+                                        <li><FontAwesomeIcon icon={faBuilding} /> Walton Group</li>
+                                        <li><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh</li>
+                                    </ul>
+                                    <p className="deadline">Deadline: 20 Sep 2020</p>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="text-center">
+                                    <a href="#" className="btn btn-default">Apply Online</a>
+                                </div>
+                                <div className="social-share">
+                                    <ul className="social-icons">
+                                        <li className="facebook"><a href="#"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+                                        <li className="google"><a href="#"><FontAwesomeIcon icon={faGoogle} /></a></li>
+                                        <li className="linkedin"><a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
+                                        <li className="twitter"><a href="#"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                                        <li className="pinterest"><a href="#"><FontAwesomeIcon icon={faPinterest} /></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div className="row">
                         <div className="col-sm-8">
                             <div className="job-details">
-                                <div className="detail-top">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h3>Executive / Sr. Executive (Finance & Accounts)</h3>
-                                        <p>Walton Group</p>
-                                        <ul className="top-points">
-                                            <li><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh</li>
-                                            {/* <li>Vacancy: Not specific</li> */}
-                                        </ul>
-                                        <p className="deadline">Deadline: 20 Sep 2020</p>
-                                        {/* <div className="social-share">
-                                            <ul>
-                                                <li className="facebook"><a href="#"><FontAwesomeIcon icon={faFacebookF} /></a></li>
-                                                <li className="google"><a href="#"><FontAwesomeIcon icon={faGoogle} /></a></li>
-                                                <li className="linkedin"><a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
-                                                <li className="twitter"><a href="#"><FontAwesomeIcon icon={faTwitter} /></a></li>
-                                                <li className="pinterest"><a href="#"><FontAwesomeIcon icon={faPinterest} /></a></li>
-                                            </ul>
-                                        </div> */}
-                                    </div>
-                                </div>
+
                                 <div className="detail-body">
                                     <h4>Job Responsibilities</h4>
+                                    <p>Aenean condimentum aliquet suscipit. Sed volutpat erat tortor, non tristique odio feugiat eu. In aliquet, odio varius eleifend viverra, mi velit fermentum libero, ac molestie erat odio in justo. Maecenas ex ante, tempus quis fermentum eu, maximus nec odio. Quisque lacinia est ex, in consequat mi tempus vel. Maecenas consequat cursus aliquam.</p>
                                     <ul>
                                         <li>Supervise & maintain petty cash</li>
                                         <li>Preparation of daily & weekly budget</li>
@@ -84,9 +94,9 @@ const JobDetails = (props) => {
                                 </div>
                                 <div className="company-information">
                                     <h4>Walton Group</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt est eget dignissim placerat. Nulla lacinia hendrerit rutrum. Aliquam ornare finibus nisi in efficitur. Sed ut lacinia magna. Phasellus tristique ligula leo, in blandit ipsum lacinia sit amet. Mauris magna turpis, lobortis sed aliquet id, ultrices id erat.</p>
                                     <ul>
                                         <li><strong>Address: </strong>Dhaka, Bangladesh</li>
-                                        <li><strong>Profile: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt est eget dignissim placerat. Nulla lacinia hendrerit rutrum. Aliquam ornare finibus nisi in efficitur. Sed ut lacinia magna. Phasellus tristique ligula leo, in blandit ipsum lacinia sit amet. Mauris magna turpis, lobortis sed aliquet id, ultrices id erat.</li>
                                         <li><strong>Website: </strong><a href="#">www.example.com</a></li>
                                     </ul>
                                 </div>
@@ -94,17 +104,8 @@ const JobDetails = (props) => {
                         </div>
                         <div className="col-sm-4">
                             <div className="sidebar">
-                                <a href="#" className="btn btn-default d-block">Apply</a>
-                                <div className="social-share">
-                                    <ul className="social-icons">
-                                        <li className="facebook"><a href="#"><FontAwesomeIcon icon={faFacebookF} /></a></li>
-                                        <li className="google"><a href="#"><FontAwesomeIcon icon={faGoogle} /></a></li>
-                                        <li className="linkedin"><a href="#"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
-                                        <li className="twitter"><a href="#"><FontAwesomeIcon icon={faTwitter} /></a></li>
-                                        <li className="pinterest"><a href="#"><FontAwesomeIcon icon={faPinterest} /></a></li>
-                                    </ul>
-                                </div>
-                                
+
+
                                 <div className="job-overview">
                                     <h4>Job Overview</h4>
                                     <ul>
@@ -140,10 +141,10 @@ const JobDetails = (props) => {
                                             <span className="icon"><i className="flaticon-money"></i></span>
                                             <p><strong>Salary</strong> Negotiable</p>
                                         </li>
-                                        
+
                                     </ul>
                                 </div>
-                                
+
                                 <div className="job-video mt-4">
                                     <iframe width="100%" height="250" src="https://www.youtube.com/embed/5L4DQfVIcdg" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                                 </div>
