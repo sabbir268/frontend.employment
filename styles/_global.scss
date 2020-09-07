@@ -72,7 +72,7 @@ label{
 .form-control{
 	height: 44px;
 	font-size: 14px;
-	border: none;
+	border: 1px solid $border-color;
 	border-radius: 3px;
 	-webkit-appearance: none;
 	&:focus{
@@ -116,19 +116,6 @@ label{
 }
 .react-datepicker-wrapper{
 	width: 100%;
-}
-.pagination{
-	.page-item.active{
-		.page-link{
-			background-color: #333;
-			border-color: #333;
-		}
-	}
-	.page-link{
-		color: $text-color;
-		box-shadow: none;
-		cursor: pointer;
-	}
 }
 .btn-default{
 	background-color: $primary-color;
@@ -219,7 +206,6 @@ label{
 		width: 100%;
 	}
 }
-
 .pagination{
 	// padding: 20px;
 	// background-color: #ffffff;
