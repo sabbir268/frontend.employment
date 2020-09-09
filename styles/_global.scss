@@ -75,7 +75,7 @@ label{
 	font-size: 14px;
 	border: 1px solid $border-color;
 	border-radius: 3px;
-	background: #fcfcfc;
+	background-color: #fcfcfc;
 	-webkit-appearance: none;
 	&:focus{
 		background: #fcfcfc;
@@ -209,7 +209,7 @@ label{
 	}
 }
 .page-header{
-	height: 300px;
+	height: 350px;
 	background: url('/images/home-banner.jpg');
 	background-size: cover;
 	background-position: center top;

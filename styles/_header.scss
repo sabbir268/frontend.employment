@@ -77,3 +77,38 @@ header{
         }
     }
 }
+
+.dashboard-header{
+    padding: 12px 40px;
+    @include box-shadow(0px 2px 4px 0px rgba(0, 0, 0, 0.05));
+    .logo{
+        max-width: 200px;
+    }
+    .menu-right{
+        text-align: right;
+        li{
+            list-style: none;
+            display: inline-block;
+            margin-left: 30px;
+        }
+        .user-dropdown{
+            cursor: pointer;
+            span{
+                display: inline-block;
+                margin-top: 8px;
+            }
+            .image{
+                height: 40px;
+                width: 40px;
+                overflow: hidden;
+                border: 2px solid #333333;
+                border-radius: 100%;
+                float: right;
+                margin-left: 10px;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

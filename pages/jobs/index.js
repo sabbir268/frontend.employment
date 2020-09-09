@@ -12,21 +12,14 @@ const Jobs = (props) => {
                 <div className="page-header">
                     <div className="overlay">
                         <div className="container">
-                            <h3>EXPLORE THOUSAND OF JOBS</h3>
+                            <h3>EXPLORE FROM THOUSAND OF JOBS</h3>
                             <form>
+                                <div className="form-group">
+                                    <input type="text" name="title" placeholder="Job title, skills, keywords etc..." className="form-control" />
+                                </div>
                                 <div className="row sm-gutters">
                                     <div className="col-sm-10">
                                         <div className="row sm-gutters">
-                                            <div className="col-sm-4">
-                                                <div className="form-group">
-                                                    <input type="text" name="title" placeholder="Keywords" className="form-control" />
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="form-group">
-                                                    <input type="text" name="location" placeholder="Location" className="form-control" />
-                                                </div>
-                                            </div>
                                             <div className="col-sm-4">
                                                 <div className="form-group select">
                                                     <select name="industry" placeholder="Industry" className="form-control">
@@ -35,6 +28,24 @@ const Jobs = (props) => {
                                                         <option>Real State/Developers</option>
                                                         <option>Information Technology</option>
                                                         <option>Garments/Textile</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-4">
+                                                <div className="form-group select">
+                                                    <select name="industry" placeholder="Industry" className="form-control">
+                                                        <option>Job Package</option>
+                                                        <option>Classic</option>
+                                                        <option>Premium</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div className="col-sm-4">
+                                                <div className="form-group select">
+                                                    <select name="industry" placeholder="Industry" className="form-control">
+                                                        <option>Select Skill</option>
+                                                        <option>General</option>
+                                                        <option>Special Skilled</option>
                                                     </select>
                                                 </div>
                                             </div>

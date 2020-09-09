@@ -7,18 +7,32 @@ import PhoneInput from 'react-phone-input-2';
 
 import Countries from '../../../components/data/countries.json';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCog, faGraduationCap, faImage, faBriefcase, faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { } from '@fortawesome/free-regular-svg-icons';
+
 
 const JobseekerDashboard = (props) => {
     return (
         <JobseekerLayout>
             <div className="edit-resume">
-                <ul className="resume-top-menu">
-                    <li><Link href="/jobseeker-dashboard/edit-resume"><a>Personal</a></Link></li>
-                    <li><Link href="/jobseeker-dashboard/edit-resume/employment"><a>Employment</a></Link></li>
-                    <li><Link href="/jobseeker-dashboard/edit-resume/education"><a>Education</a></Link></li>
-                    <li><Link href="/jobseeker-dashboard/edit-resume/others"><a>Others</a></Link></li>
-                    <li><Link href="/jobseeker-dashboard/edit-resume/photograph"><a>Photo</a></Link></li>
+                <ul className="resume-top-menu-two">
+                    <li className="active"><Link href="/jobseeker-dashboard/edit-resume"><a>
+                        <i className="icon"><FontAwesomeIcon icon={faAddressCard} /> </i>
+                        <span>Personal</span>
+                    </a></Link></li>
+                    <li><Link href="/jobseeker-dashboard/edit-resume/employment"><a><i className="icon"><FontAwesomeIcon icon={faBriefcase} /></i> <span>Employment</span></a></Link></li>
+                    <li><Link href="/jobseeker-dashboard/edit-resume/education"><a><i className="icon"><FontAwesomeIcon icon={faGraduationCap} /></i> <span>Education</span></a></Link></li>
+                    <li><Link href="/jobseeker-dashboard/edit-resume/others"><a><i className="icon"><FontAwesomeIcon icon={faCog} /></i> <span>Others</span></a></Link></li>
+                    <li><Link href="/jobseeker-dashboard/edit-resume/photograph"><a><i className="icon"><FontAwesomeIcon icon={faImage} /></i> <span>Photo</span></a></Link></li>
                 </ul>
+                {/* <ul className="resume-top-menu">
+                    <li className="active"><Link href="/jobseeker-dashboard/edit-resume"><a><FontAwesomeIcon icon={faAddressCard} /> <span>Personal</span></a></Link></li>
+                    <li><Link href="/jobseeker-dashboard/edit-resume/employment"><a><FontAwesomeIcon icon={faBriefcase} /> <span>Employment</span></a></Link></li>
+                    <li><Link href="/jobseeker-dashboard/edit-resume/education"><a><FontAwesomeIcon icon={faGraduationCap} /> <span>Education</span></a></Link></li>
+                    <li><Link href="/jobseeker-dashboard/edit-resume/others"><a><FontAwesomeIcon icon={faCog} /> <span>Others</span></a></Link></li>
+                    <li><Link href="/jobseeker-dashboard/edit-resume/photograph"><a><FontAwesomeIcon icon={faImage} /> <span>Photo</span></a></Link></li>
+                </ul> */}
                 <h3>Personal Informations</h3>
                 <div className="row">
                     <div className="col-sm-6">
