@@ -55,8 +55,10 @@ const JobseekerLayout = (props) => {
                             <ul className="submenu">
                                 <li><Link href="/jobseeker-dashboard/view-resume"><a>View Resume</a></Link></li>
                                 <li><Link href="/jobseeker-dashboard/edit-resume"><a>Edit Resume</a></Link></li>
-                                <li><Link href="#"><a>Upload Resume</a></Link></li>
-                                <li><Link href="#"><a>Cover Letter</a></Link></li>
+                                <li><Link href="/jobseeker-dashboard/upload-resume"><a>Upload Resume</a></Link></li>
+                                <li><Link href="/jobseeker-dashboard/upload-resume"><a>Download Resume</a></Link></li>
+                                <li><Link href="/jobseeker-dashboard/upload-resume"><a>Email Resume</a></Link></li>
+                                <li><Link href="/jobseeker-dashboard/cover-letter"><a>Cover Letter</a></Link></li>
                             </ul>
                         </li>
                         <li><a href="#"><FontAwesomeIcon icon={faTasks} /> Activities</a></li>

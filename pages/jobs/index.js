@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faBriefcase, faGraduationCap,faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 
 const Jobs = (props) => {
@@ -12,56 +12,51 @@ const Jobs = (props) => {
                 <div className="page-header">
                     <div className="overlay">
                         <div className="container">
-                            <h3>EXPLORE FROM THOUSAND OF JOBS</h3>
+                            <h3>Search for a Job</h3>
                             <form>
                                 <div className="form-group">
                                     <input type="text" name="title" placeholder="Job title, skills, keywords etc..." className="form-control" />
-                                </div>
-                                <div className="row sm-gutters">
-                                    <div className="col-sm-10">
-                                        <div className="row sm-gutters">
-                                            <div className="col-sm-4">
-                                                <div className="form-group select">
-                                                    <select name="industry" placeholder="Industry" className="form-control">
-                                                        <option>Category</option>
-                                                        <option>Education</option>
-                                                        <option>Real State/Developers</option>
-                                                        <option>Information Technology</option>
-                                                        <option>Garments/Textile</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="form-group select">
-                                                    <select name="industry" placeholder="Industry" className="form-control">
-                                                        <option>Job Package</option>
-                                                        <option>Classic</option>
-                                                        <option>Premium</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div className="col-sm-4">
-                                                <div className="form-group select">
-                                                    <select name="industry" placeholder="Industry" className="form-control">
-                                                        <option>Select Skill</option>
-                                                        <option>General</option>
-                                                        <option>Special Skilled</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-sm-2">
-                                        <button type="submit" className="btn btn-default">Find Job</button>
-                                    </div>
+                                    <button type="submit" className="search-button"><FontAwesomeIcon icon={faSearch} /></button>
                                 </div>
                             </form>
+                            <div className="row sm-gutters">
+                                <div className="col-sm-4">
+                                    <div className="form-group select">
+                                        <select name="industry" placeholder="Industry" className="form-control">
+                                            <option>Category</option>
+                                            <option>Education</option>
+                                            <option>Real State/Developers</option>
+                                            <option>Information Technology</option>
+                                            <option>Garments/Textile</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="col-sm-4">
+                                    <div className="form-group select">
+                                        <select name="industry" placeholder="Industry" className="form-control">
+                                            <option>Job Package</option>
+                                            <option>Classic</option>
+                                            <option>Premium</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="col-sm-4">
+                                    <div className="form-group select">
+                                        <select name="industry" placeholder="Industry" className="form-control">
+                                            <option>Select Skill</option>
+                                            <option>General</option>
+                                            <option>Special Skilled</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
                 <div className="job-list section-padding">
                     <div className="container">
-                        <div className="row sm-gutters">
+                        <div className="row">
                             <div className="col-sm-3">
                                 <div className="sidebar">
                                     <div className="sidebar-item">

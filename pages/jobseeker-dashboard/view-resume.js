@@ -11,7 +11,7 @@ const ViewResume = (props) => {
         <JobseekerLayout>
             <div className="view-resume">
                 <div className="row">
-                    <div className="col-sm-8">
+                    <div className="col-sm-12">
                         <div className="profile">
                             <div className="row align-items-center">
                                 <div className="col-sm-6">
@@ -28,7 +28,7 @@ const ViewResume = (props) => {
                                 </div>
                                 <div className="col-sm-6">
                                     <div className="image">
-                                        <img src="/images/team-1.jpg" alt="user" className="img-thumbnail" />
+                                        <img src="/images/resume.jpg" alt="user" />
                                     </div>
                                 </div>
                             </div>
@@ -68,6 +68,39 @@ const ViewResume = (props) => {
                                 <p className="result">Result: 3.5 out of 4</p>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam sit fugit voluptatum eaque id placeat illo consequatur sint dolore repellendus odit in, nostrum cum rem facere, soluta harum nihil et.</p>
                             </div>
+                        </div>
+                        <div className="languages">
+                            <h2 className="title">Languages</h2>
+                            <ul>
+                                <li>
+                                    <p>English</p>
+                                    <span>High</span>
+                                </li>
+                                <li>
+                                    <p>Bangla</p>
+                                    <span>High</span>
+                                </li>
+                                <li>
+                                    <p>Chinese</p>
+                                    <span>Medium</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="personal-information mt-4">
+                            <h2 className="title">Personal Information</h2>
+                            <ul>
+                                <li><strong>Mother's Name</strong><span>:</span> Example Name</li>
+                                <li><strong>Father's Name</strong><span>:</span> Example Name</li>
+                                <li><strong>Gender</strong><span>:</span> Male</li>
+                                <li><strong>Religion</strong><span>:</span> Islam</li>
+                                <li><strong>Marital Status</strong><span>:</span> Single</li>
+                                <li><strong>Blood Group</strong><span>:</span> A-</li>
+                                <li><strong>Country</strong><span>:</span> Bangladesh</li>
+                                <li><strong>Present Address</strong><span>:</span> Road 10, Baridhara House 5, Dhaka, Bangladesh</li>
+                                <li><strong>Permanent Address</strong><span>:</span> Road 10, Baridhara House 5, Dhaka, Bangladesh</li>
+                                <li><strong>Date of Birth</strong><span>:</span> 08-04-1990</li>
+                                <li><strong>Age</strong><span>:</span> 30</li>
+                            </ul>
                         </div>
                     </div>
                     <div className="col-sm-4"></div>

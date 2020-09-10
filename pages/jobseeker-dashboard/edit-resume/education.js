@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import JobseekerLayout from '../../../components/JobseekerLayout';
+import EditResumeMenu from '../../../components/EditResumeMenu';
 
 import DatePicker from "react-datepicker";
 import PhoneInput from 'react-phone-input-2';
@@ -15,13 +16,7 @@ const JobseekerDashboard = (props) => {
     return (
         <JobseekerLayout>
             <div className="edit-resume">
-                <ul className="resume-top-menu">
-                    <li><Link href="/jobseeker-dashboard/edit-resume"><a><FontAwesomeIcon icon={faAddressCard} /> <span>Personal</span></a></Link></li>
-                    <li><Link href="/jobseeker-dashboard/edit-resume/employment"><a><FontAwesomeIcon icon={faBriefcase} /> <span>Employment</span></a></Link></li>
-                    <li className="active"><Link href="/jobseeker-dashboard/edit-resume/education"><a><FontAwesomeIcon icon={faGraduationCap} /> <span>Education</span></a></Link></li>
-                    <li><Link href="/jobseeker-dashboard/edit-resume/others"><a><FontAwesomeIcon icon={faCog} /> <span>Others</span></a></Link></li>
-                    <li><Link href="/jobseeker-dashboard/edit-resume/photograph"><a><FontAwesomeIcon icon={faImage} /> <span>Photo</span></a></Link></li>
-                </ul>
+                <EditResumeMenu page="education" />
                 <h3>Education</h3>
                 <div className="row">
                     <div className="col-sm-6">

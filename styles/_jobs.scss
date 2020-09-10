@@ -1,10 +1,59 @@
+.sidebar{
+    .sidebar-item{
+        background-color: #ffffff;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        .title{
+            text-transform: uppercase;
+            font-size: 16px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid $primary-color;
+        }
+        ul{
+            li{
+                list-style: none;
+                line-height: 30px;
+                position: relative;
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    height: 12px;
+                    width: 12px;
+                    border: 1px solid $border-color;
+                    margin-right: 8px;
+                }
+                span{
+                    font-size: 12px;
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
 .job-list-page{
+    .page-header{
+        .form-group{
+            position: relative;
+        }
+        .form-control:focus{
+            border-color: #ffffff;
+        }
+        .search-button{
+            position: absolute;
+            right: 20px;
+            top: 5px;
+            background: transparent;
+            color: $primary-color;
+            border: none;
+            font-size: 24px;
+            outline: none;
+            // padding: 5px 40px;
+            // border-radius: 0px 3px 3px 0px;
+        }
+    }
     .job-filter{
-        // background-color: #ffffff;
-        // border: 1px solid $border-color;
-        // @include box-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.2));
-        // border-radius: 3px;
-        // padding: 20px;
         margin-bottom: 10px;
         p{
             font-size: 14px;
@@ -34,20 +83,19 @@
 	.job-item{
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: end;
 		background-color: #fff;
 		padding: 16px;
 		border-radius: 3px;
         margin-bottom: 20px;
         border: 1px solid $border-color;
-        // @include box-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.2));
         @include transition(.3s);
         position: relative;
         &:hover{
             @include box-shadow(0px 2px 3px 0px rgba(0, 0, 0, 0.1));
         }
 		.logo{
-			max-width: 110px;
+			max-width: 90px;
 			border: 1px solid $border-color;
 			padding: 10px;
 			margin-right: 20px;
@@ -67,7 +115,11 @@
 				li{
                     list-style: none;
                     font-size: 14px;
-					color: $text-color-light;
+                    color: $text-color-light;
+                    line-height: 26px;
+                    &:first-child{
+                        margin-bottom: 5px;
+                    }
 					svg{
 						font-size: 13px;
 						width: 20px;
