@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import JobseekerLayout from '../../../components/JobseekerLayout';
-import EditResumeMenu from '../../../components/EditResumeMenu';
+import EditResumeMenu from '../../../components/EditResumeMenuThree';
 
 import DatePicker from "react-datepicker";
 import PhoneInput from 'react-phone-input-2';

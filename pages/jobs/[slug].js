@@ -85,12 +85,12 @@ const JobDetails = (props) => {
                                         <li>The applicants should have good team player.</li>
                                     </ul>
 
-                                    <div className="apply-bottom">
+                                    {/* <div className="apply-bottom">
                                         <button className="btn btn-green">Apply Online</button>
                                         <p>Or</p>
                                         <p>Send your CV to hr@example.com</p>
                                         <p><strong>Application Deadline: </strong>20 Sep 2020</p>
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <div className="company-information">
                                     <h4>Walton Group</h4>

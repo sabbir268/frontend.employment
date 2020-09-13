@@ -17,7 +17,7 @@ import { Button } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 
 
-const JobseekerLayout = (props) => {
+const EmployerLayout = (props) => {
 
     const [activeClass, setActiveClass] = useState(false);
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -93,29 +93,19 @@ const JobseekerLayout = (props) => {
             <div className="dashboard jobseeker section-bg">
                 <div className="sidebar">
                     <ul className="menu">
-
-
-
                         <li><a href="/jobseeker-dashboard"><FontAwesomeIcon icon={faHome} /> Dashboard</a></li>
-                        <li className={(activeClass === 'resume') ? 'active' : ''}>
-                            <a href="#" onClick={addActiveClass.bind(this, 'resume')}><FontAwesomeIcon icon={faEdit} /> Resume <FontAwesomeIcon icon={faChevronRight} className="right-icon" /></a>
+                        <li className={(activeClass === 'jobs') ? 'active' : ''}>
+                            <a href="#" onClick={addActiveClass.bind(this, 'jobs')}><FontAwesomeIcon icon={faEdit} /> Jobs <FontAwesomeIcon icon={faChevronRight} className="right-icon" /></a>
                             <ul className="submenu">
-                                <li><Link href="/jobseeker-dashboard/view-resume"><a>View Resume</a></Link></li>
-                                <li><Link href="/jobseeker-dashboard/edit-resume"><a>Edit Resume</a></Link></li>
-                                <li><Link href="/jobseeker-dashboard/upload-resume"><a>Upload Resume</a></Link></li>
-                                <li><Link href="/jobseeker-dashboard/upload-resume"><a>Download Resume</a></Link></li>
-                                <li><Link href="/jobseeker-dashboard/upload-resume"><a>Email Resume</a></Link></li>
-                                <li><Link href="/jobseeker-dashboard/cover-letter"><a>Cover Letter</a></Link></li>
+                                <li><Link href="/employer-dashboard/post-job"><a>Post a Job</a></Link></li>
+                                <li><Link href="/employer-dashboard/post-job"><a>Job List</a></Link></li>
+                                <li><Link href="/employer-dashboard/post-job"><a>Packges</a></Link></li>
+                                <li><Link href="/employer-dashboard/post-job"><a>Job Posting History</a></Link></li>
                             </ul>
                         </li>
                         <li><a href="#"><FontAwesomeIcon icon={faTasks} /> Activities</a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faProjectDiagram} /> Resume Service</a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faChartPie} /> Employer Activities</a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faCannabis} /> Referal Activities</a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faEnvelopeOpen} /> Message & SMS</a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faChalkboardTeacher} /> My Trainings</a></li>
+                        <li><a href="#"><FontAwesomeIcon icon={faEnvelopeOpen} /> Message</a></li>
                         <li><a href="#"><FontAwesomeIcon icon={faCogs} /> Settings</a></li>
-                        <li><a href="#"><FontAwesomeIcon icon={faTags} /> Offers</a></li>
                     </ul>
                 </div>
 
@@ -126,4 +116,4 @@ const JobseekerLayout = (props) => {
         </>
     )
 }
-export default JobseekerLayout;
+export default EmployerLayout;

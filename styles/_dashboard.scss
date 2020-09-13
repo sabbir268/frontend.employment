@@ -198,15 +198,6 @@
                 background: #6381a1;
                 position: relative;
                 &::before{
-                    // content: "";
-                    // position: absolute;
-                    // right: 4px;
-                    // top: 14px;
-                    // border-top: 8px solid #fff;
-                    // border-right: 8px solid #FFF;
-                    // border-left: 8px solid transparent;
-                    // border-bottom: 8px solid transparent;
-                    // transform: rotate(45deg);
                     content: "";
                     position: absolute;
                     height: 40px;
@@ -229,6 +220,57 @@
                 }
                 &.active a{
                     color: #38d05c;
+                }
+            }
+        }
+        .resume-top-menu-three{
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-bottom: 3px solid $primary-color;
+            li{
+                list-style: none;
+                display: inline-block;
+                width: 20%;
+                text-align: center;
+                position: relative;
+                a{
+                    display: block;
+                    text-decoration: none;
+                    padding: 19px 15px;
+                    color: $text-color;
+                    position: relative;
+                    z-index: 9;
+                    transition-delay: 1s;
+                }
+                &.active::before{
+                    content: "";
+                    position: absolute;
+                    width: calc(100% + 30px);
+                    left: 0;
+                    top: 0;
+                    border-top: 60px solid #554da0;
+                    border-right: 30px solid transparent;
+                    border-bottom: 0px solid transparent;
+                    transition: .75s;
+                    z-index: 2;
+                    
+                }
+                &.animation::before{
+                    animation: scroll-right .5s;
+                    z-index: 1;
+                }
+                &.active a{
+                    color: #ffffff
+                }
+            }
+
+            @keyframes scroll-right {
+                from{
+                    width: 0;
+                    border-right: 30px solid transparent;
+                }
+                to{
+                    width: calc(100% + 30px);
                 }
             }
         }
