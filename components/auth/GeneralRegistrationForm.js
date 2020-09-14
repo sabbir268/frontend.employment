@@ -4,7 +4,7 @@ import Link from 'next/link';
 import DatePicker from "react-datepicker";
 import PhoneInput from 'react-phone-input-2';
 
-import Countries from '../../components/data/countries.json';
+import countries from '../../utils/country-list';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -75,7 +75,7 @@ class GeneralRegistrationForm extends React.Component {
                             <select name="country" value={country} onChange={this.handleChange} className="form-control">
                                 <option>Select Country</option>
                                 {
-                                    Countries.map(country =>
+                                    countries.map(country =>
                                         <option key={country.alpha2Code} value={country.name}>{country.name}</option>
                                     )
                                 }

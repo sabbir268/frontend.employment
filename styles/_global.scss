@@ -113,7 +113,6 @@ label{
 		right: 14px;
 		position: absolute;
 		@include transform(rotate(45deg));
-		z-index: 1;
 	}
 	&.label:before{
 		top: 48px;
@@ -139,6 +138,53 @@ label{
 	height: 46px;
 	width: 100%;
 	background: #fcfcfc;
+}
+.rich-text{
+	border: 1px solid $border-color;
+	.richtext-icons{
+		border-bottom: 2px solid $border-color;
+		padding: 15px 20px;
+		span{
+			color: rgb(204, 204, 204);
+			margin-right: 10px;
+			cursor: pointer;
+			&.active{
+				color: $text-color;
+			}
+			svg{
+				font-size: 20px;
+			}
+		}
+	}
+	.richtext-content{
+		padding: 20px;
+		min-height: 150px;
+		background-color: #fcfcfc;
+	}
+}
+.richtext-content{
+	ul{
+		padding-left: 16px;
+	}
+}
+.css-g1d714-ValueContainer{
+	padding: 7px 10px!important;
+	background-color: #fcfcfc;
+}
+.css-yk16xz-control{
+	border: 1px solid $border-color!important;
+	border-radius: 3px!important;
+}
+.css-1pahdxg-control{
+	border: 1px solid #333333!important;
+	box-shadow: none!important;
+}
+.css-1pahdxg-control:hover{
+	border: 1px solid #333333!important;
+	box-shadow: none!important;
+}
+.css-1hb7zxy-IndicatorsContainer{
+	background-color: #fcfcfc;
 }
 .btn{
 	padding: 8px 30px;
@@ -233,11 +279,6 @@ label{
 	}
 }
 .pagination{
-	// padding: 20px;
-	// background-color: #ffffff;
-	// border: 1px solid $border-color;
-	// @include box-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.2));
-    // border-radius: 3px;
 	ul{
 		text-align: center;
 		li{

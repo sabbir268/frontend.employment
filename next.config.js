@@ -16,5 +16,6 @@ module.exports = withFonts({
     },
     env: {
         API_URL: 'xxx',
+        MAP_API: process.env.MAP_API
     },
 })

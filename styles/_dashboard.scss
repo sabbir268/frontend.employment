@@ -437,4 +437,35 @@
             }
         }
     }
+    .job-post{
+        .job-type{
+            text-align: center;
+            margin: 0 auto 20px;
+            max-width: 400px;
+            li{
+                list-style: none;
+                display: inline-block;
+                width: calc(50% - 10px);
+                a{
+                    cursor: pointer;
+                    display: block;
+                    padding: 8px 30px;
+                    font-weight: 500;
+                    border: 2px solid $primary-color;
+                    color: $primary-color;
+                    @include border-radius(3px);
+                    text-align: center;
+                }
+                &:first-child{
+                    margin-right: 20px;
+                }
+                &.active{
+                    a{
+                        background-color: $primary-color;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
 }
