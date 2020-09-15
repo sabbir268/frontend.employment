@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import EmployerLayout from '../../components/EmployerLayout';
-import GeneralJobForm from '../../components/jobs/GeneralJobForm';
+import JobForm from '../../components/jobs/JobForm';
 
 const PostJob = (props) => {
-
-    const [formType, setFormType] = useState('general');
+    const [jobType, setJobType] = useState('general');
 
     return (
         <EmployerLayout>
@@ -12,17 +11,15 @@ const PostJob = (props) => {
                 <div className="border-bottom mb-5">
                     <h2 className="text-center mb-4">Post a Job</h2>
                     <ul className="job-type mb-4">
-                        <li className={(formType === 'general') ? 'active' : ''}>
-                            <a onClick={() => { setFormType('general') }}>General</a>
+                        <li className={(jobType === 'general') ? 'active' : ''}>
+                            <a onClick={() => { setJobType('general') }}>General</a>
                         </li>
-                        <li className={(formType === 'special') ? 'active' : ''}>
-                            <a onClick={() => { setFormType('special') }}>Special Skilled</a>
+                        <li className={(jobType === 'special') ? 'active' : ''}>
+                            <a onClick={() => { setJobType('special') }}>Special Skilled</a>
                         </li>
                     </ul>
                 </div>
-                {formType === 'general' && <GeneralJobForm />}
-                {/* {formType === 'special' && <SpecialRegistrationForm />} */}
-
+                <JobForm jobType={jobType} />
             </div>
         </EmployerLayout>
     )

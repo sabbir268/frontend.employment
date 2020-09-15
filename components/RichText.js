@@ -45,6 +45,7 @@ const RichText = (props) => {
                 renderElement={renderElement}
                 renderLeaf={renderLeaf}
                 placeholder=""
+                style={props.height && {height: props.height}}
                 spellCheck
                 onKeyDown={event => {
                     for (const hotkey in HOTKEYS) {

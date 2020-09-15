@@ -73,6 +73,17 @@ label{
 .section-bg{
 	background-color: $bg-color;
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .form-control{
 	height: 46px;
 	font-size: 14px;
@@ -88,6 +99,9 @@ label{
 }
 .form-control.error{
 	border-color: $red;
+}
+.react-select.error > div{
+	border-color: $red!important;
 }
 .form-error{
 	background: #ffdce0;
@@ -161,30 +175,14 @@ label{
 		min-height: 150px;
 		background-color: #fcfcfc;
 	}
+	&.error{
+		border-color: $red;
+	}
 }
 .richtext-content{
 	ul{
 		padding-left: 16px;
 	}
-}
-.css-g1d714-ValueContainer{
-	padding: 7px 10px!important;
-	background-color: #fcfcfc;
-}
-.css-yk16xz-control{
-	border: 1px solid $border-color!important;
-	border-radius: 3px!important;
-}
-.css-1pahdxg-control{
-	border: 1px solid #333333!important;
-	box-shadow: none!important;
-}
-.css-1pahdxg-control:hover{
-	border: 1px solid #333333!important;
-	box-shadow: none!important;
-}
-.css-1hb7zxy-IndicatorsContainer{
-	background-color: #fcfcfc;
 }
 .btn{
 	padding: 8px 30px;
@@ -204,10 +202,9 @@ label{
 		box-shadow: none;
 	}
 }
-
 .btn-green{
 	background-color: $green;
-	border: 1px solid $green;
+	border: 2px solid $green;
 	color: #fff;
 	padding: 8px 15px;
 	min-width: 120px;
@@ -223,12 +220,14 @@ label{
 }
 .btn-black{
 	background-color: #333;
-	border: 1px solid #333;
+	border: 2px solid #333;
 	color: #fff;
 	padding: 8px 15px;
 	min-width: 120px;
+	font-weight: 500;
 	&:hover{
-		color: #fff;
+		background-color: #ffffff;
+		color: #333333;
 	}
 	&:focus{
 		box-shadow: none;
