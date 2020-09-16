@@ -7,9 +7,64 @@ import CountUp from 'react-countup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
+const ValidateEmail = (mail) => {
+    if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail)) {
+        return (true)
+    }
+    return (false)
+}
+
 class EmployerLogin extends React.Component {
 
+    constructor(props) {
+        super();
+        this.state = {
+            email: '',
+            password: '',
+            errors: {}
+        }
+    }
+
+    handleChange = (e) => {
+        const value = e.target.value;
+        const name = e.target.name;
+        const errors = this.state.errors;
+        errors[name] = '';
+
+        this.setState({
+            [name]: value,
+            errors
+        })
+    }
+
+    handleValidation() {
+        let fields = this.state;
+        let errors = {};
+        let formIsValid = true;
+
+        if (!fields.email || !ValidateEmail(fields.email)) {
+            formIsValid = false;
+            errors.email = "Invalid Email address";
+        }
+        if (!fields.password) {
+            formIsValid = false;
+            errors.password = "Password is required.";
+        }
+
+        this.setState({ errors: errors });
+        return formIsValid;
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (this.handleValidation()) {
+            console.log("submitted")
+        }
+    }
+
     render() {
+        const { email, password, errors } = this.state;
         return (
             <Layout>
                 <div className="section-padding login-page employer">
@@ -48,12 +103,14 @@ class EmployerLogin extends React.Component {
                             <div className="col-sm-6">
                                 <div className="login-form">
                                     <h2 className="text-center mb-3">Employer Login</h2>
-                                    <form>
+                                    <form onSubmit={this.handleSubmit} noValidate>
                                         <div className="form-group">
-                                            <input type="email" placeholder="E-mail Address *" className="form-control" />
+                                            <input type="email" name="email" value={email} onChange={this.handleChange} placeholder="Email Address *" className={`form-control ${errors.email ? 'error' : ''}`} />
+                                            {errors.email && <div className="error-message">{errors.email}</div>}
                                         </div>
                                         <div className="form-group">
-                                            <input type="password" placeholder="Password *" className="form-control" />
+                                            <input type="password" name="password" value={password} onChange={this.handleChange} placeholder="Password *" className={`form-control ${errors.password ? 'error' : ''}`} />
+                                            {errors.password && <div className="error-message">{errors.password}</div>}
                                         </div>
                                         <div className="submit-button">
                                             <a href="#">Forget Password?</a>

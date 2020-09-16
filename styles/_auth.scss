@@ -16,10 +16,14 @@
             text-transform: uppercase;
         }
         .form-control{
+            background: #fff;
             border-radius: 0px;
             border: none;
             border-bottom: 1px solid $border-color;
             padding: 0px;
+            &.error{
+                border-color: $red;
+            }
         }
         .submit-button{
             display: flex;
@@ -185,9 +189,6 @@
             label{
                 font-size: 14px;
             }
-            .form-control{
-                border: 1px solid $border-color;
-            }
             ::-webkit-placeholder{
                 color: $text-color-light;
                 font-weight: 400;
@@ -200,7 +201,7 @@
                 color: $text-color-light;
             }
             .gender{
-                line-height: 2.6;
+                margin-top: 14px;
                 span{
                     float: left;
                     margin-right: 5px;

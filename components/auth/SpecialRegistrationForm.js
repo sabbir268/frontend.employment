@@ -12,7 +12,7 @@ import { faFacebookF, faGoogle, faLinkedinIn } from '@fortawesome/free-brands-sv
 class SpecialRegistrationForm extends React.Component {
 
     constructor(props) {
-        super(props);
+        super();
         this.state = {
             full_name: '',
             gender: '',
@@ -20,25 +20,80 @@ class SpecialRegistrationForm extends React.Component {
             country: '',
             nid: '',
             phone: '',
-            skill: ''
+            skill: '',
+            errors: {}
         }
     }
 
     handleChange = (e) => {
         const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+        const name = e.target.name;
+        const errors = this.state.errors;
+        errors[name] = '';
+
         this.setState({
-            [e.target.name]: value
+            [name]: value,
+            errors
         })
+    }
+
+    handleSelectChange = (name, selectedOption) => {
+        const errors = this.state.errors;
+        errors[name] = '';
+        this.setState({
+            [name]: selectedOption,
+            errors
+        })
+    }
+
+    handleValidation() {
+        let fields = this.state;
+        let errors = {};
+        let formIsValid = true;
+
+        if (!fields.full_name) {
+            formIsValid = false;
+            errors.full_name = "Full name is required.";
+        }
+        if (!fields.gender) {
+            formIsValid = false;
+            errors.gender = "Gender is required.";
+        }
+        if (!fields.dob) {
+            formIsValid = false;
+            errors.dob = "Date of Birth is required.";
+        }
+        if (!fields.country) {
+            formIsValid = false;
+            errors.country = "Country is required.";
+        }
+        if (!fields.nid) {
+            formIsValid = false;
+            errors.nid = "NID is required.";
+        }
+        if (!fields.phone) {
+            formIsValid = false;
+            errors.phone = "Phone number is required.";
+        }
+        if (!fields.terms) {
+            formIsValid = false;
+            errors.terms = "This is required.";
+        }
+
+        this.setState({ errors: errors });
+        return formIsValid;
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
 
-        console.log('submited')
+        if (this.handleValidation()) {
+            console.log("submitted")
+        }
     }
 
     render() {
-        const {full_name, gender, dob, country, nid, phone, skill } = this.state;
+        const {full_name, gender, dob, country, nid, phone, skill, errors } = this.state;
 
         return (
             <form onSubmit={this.handleSubmit}>
@@ -46,7 +101,8 @@ class SpecialRegistrationForm extends React.Component {
                 <div className="row sm-gutters">
                     <div className="col-sm-6">
                         <div className="form-group">
-                            <input type="text" name="full_name" value={full_name} onChange={this.handleChange} placeholder="আপনার নাম" className="form-control" />
+                            <input type="text" name="full_name" value={full_name} onChange={this.handleChange} placeholder="আপনার নাম" className={`form-control ${errors.full_name ? 'error' : ''}`} />
+                            {errors.full_name && <div className="error-message">{errors.full_name}</div>}
                         </div>
                     </div>
                     <div className="col-sm-6">
@@ -55,21 +111,23 @@ class SpecialRegistrationForm extends React.Component {
                             <input type="radio" name="gender" id="male" value="Male" checked={gender === 'Male'} onChange={this.handleChange} /> <label htmlFor="male">পুরুষ</label>
                             <input type="radio" name="gender" id="female" value="Female" checked={gender === 'Female'} onChange={this.handleChange} /> <label htmlFor="female">মহিলা</label>
                             <input type="radio" name="gender" id="other" value="Other" checked={gender === 'Other'} onChange={this.handleChange} /> <label htmlFor="other">অন্যান্য</label>
+                            {errors.gender && <div className="error-message">{errors.gender}</div>}
                         </div>
                     </div>
                     <div className="col-sm-6">
                         <DatePicker
                             selected={dob}
-                            onChange={(dob) => {this.setState({dob: dob})}}
+                            onChange={this.handleSelectChange.bind(this, 'dob')}
                             showMonthDropdown
                             showYearDropdown
-                            className="form-control"
+                            className={`form-control ${errors.dob ? 'error' : ''}`}
                             placeholderText="জন্ম তারিখ"
                         />
+                        {errors.dob && <div className="error-message mb-3">{errors.dob}</div>}
                     </div>
                     <div className="col-sm-6">
                         <div className="form-group select">
-                            <select name="country" value={country} onChange={this.handleChange} className="form-control">
+                            <select name="country" value={country} onChange={this.handleChange} className={`form-control ${errors.country ? 'error' : ''}`}>
                                 <option>দেশ নির্বাচন করুন</option>
                                 {
                                     countries.map(country =>
@@ -77,11 +135,13 @@ class SpecialRegistrationForm extends React.Component {
                                     )
                                 }
                             </select>
+                            {errors.country && <div className="error-message">{errors.country}</div>}
                         </div>
                     </div>
                     <div className="col-sm-6">
                         <div className="form-group">
-                            <input type="text" name="nid" value={nid} onChange={this.handleChange} placeholder="এনআইডি নম্বার" className="form-control" />
+                            <input type="text" name="nid" value={nid} onChange={this.handleChange} placeholder="এনআইডি নম্বার" className={`form-control ${errors.nid ? 'error' : ''}`} />
+                            {errors.nid && <div className="error-message">{errors.nid}</div>}
                         </div>
                     </div>
                     <div className="col-sm-6">
@@ -89,9 +149,10 @@ class SpecialRegistrationForm extends React.Component {
                             <PhoneInput
                                 country={'bd'}
                                 value={phone}
-                                onChange={(phone) => {this.setState({phone: phone})}}
-                                inputClass="form-control"
+                                onChange={this.handleSelectChange.bind(this, 'phone')}
+                                containerClass={`phone-input ${errors.phone ? 'error' : ''}`}
                             />
+                            {errors.phone && <div className="error-message">{errors.phone}</div>}
                         </div>
                     </div>
                     <div className="col-sm-6">
