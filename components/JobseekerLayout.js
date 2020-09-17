@@ -46,7 +46,7 @@ const JobseekerLayout = (props) => {
                 <div className="row">
                     <div className="col-sm-6">
                         <div className="logo">
-                            <Link href="/jobseeker-dashboard"><a><img src="/logo.jpeg" alt="logo" /></a></Link>
+                            <Link href="/"><a><img src="/logo.jpeg" alt="logo" /></a></Link>
                         </div>
                     </div>
                     <div className="col-sm-6">

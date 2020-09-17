@@ -259,8 +259,9 @@ input[type="number"] {
 		padding-left: 16px;
 	}
 }
-.btn {
-	padding: 8px 30px;
+.btn:focus{
+	outline: none;
+	box-shadow: none;
 }
 .btn-default {
 	background-color: $primary-color;

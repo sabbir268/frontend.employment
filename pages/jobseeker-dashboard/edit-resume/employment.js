@@ -6,8 +6,6 @@ import EditResumeMenu from '../../../components/EditResumeMenuThree';
 import DatePicker from "react-datepicker";
 import PhoneInput from 'react-phone-input-2';
 
-import Countries from '../../../components/data/countries.json';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faGraduationCap, faImage, faBriefcase, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import {  } from '@fortawesome/free-regular-svg-icons';

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Layout from './Layout';
 import Avatar from '@material-ui/core/Avatar';
 import Badge from '@material-ui/core/Badge';
 import MailIcon from '@material-ui/icons/MailOutline';
@@ -46,7 +45,7 @@ const EmployerLayout = (props) => {
                 <div className="row">
                     <div className="col-sm-6">
                         <div className="logo">
-                            <Link href="/jobseeker-dashboard"><a><img src="/logo.jpeg" alt="logo" /></a></Link>
+                            <Link href="/"><a><img src="/logo.jpeg" alt="logo" /></a></Link>
                         </div>
                     </div>
                     <div className="col-sm-6">
@@ -93,12 +92,12 @@ const EmployerLayout = (props) => {
             <div className="dashboard jobseeker section-bg">
                 <div className="sidebar">
                     <ul className="menu">
-                        <li><a href="/jobseeker-dashboard"><FontAwesomeIcon icon={faHome} /> Dashboard</a></li>
+                        <li><Link href="/employer-dashboard"><a><FontAwesomeIcon icon={faHome} /> Dashboard</a></Link></li>
                         <li className={(activeClass === 'jobs') ? 'active' : ''}>
                             <a href="#" onClick={addActiveClass.bind(this, 'jobs')}><FontAwesomeIcon icon={faEdit} /> Jobs <FontAwesomeIcon icon={faChevronRight} className="right-icon" /></a>
                             <ul className="submenu">
                                 <li><Link href="/employer-dashboard/post-job"><a>Post a Job</a></Link></li>
-                                <li><Link href="/employer-dashboard/post-job"><a>Job List</a></Link></li>
+                                <li><Link href="/employer-dashboard/manage-jobs"><a>Manage Jobs</a></Link></li>
                                 <li><Link href="/employer-dashboard/post-job"><a>Packges</a></Link></li>
                                 <li><Link href="/employer-dashboard/post-job"><a>Job Posting History</a></Link></li>
                             </ul>
