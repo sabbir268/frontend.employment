@@ -8,7 +8,7 @@ import { faEdit, faEye, faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 const EmployerJobList = (props) => {
     return (
         <EmployerLayout>
-            <div className="employer-job-list">
+            <div className="content-item employer-job-list">
                 <h3>Manage Jobs</h3>
                 <div className="table-responsive">
                     <table className="table border">

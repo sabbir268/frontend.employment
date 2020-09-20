@@ -7,7 +7,7 @@ const PostJob = (props) => {
 
     return (
         <EmployerLayout>
-            <div className="job-post">
+            <div className="content-item job-post">
                 <div className="border-bottom mb-5">
                     <h2 className="text-center mb-4">Post a Job</h2>
                     <ul className="job-type mb-4">

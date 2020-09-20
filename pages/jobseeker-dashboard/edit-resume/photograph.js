@@ -35,7 +35,7 @@ class JobseekerDashboard extends React.Component {
     render() {
         return (
             <JobseekerLayout>
-                <div className="edit-resume">
+                <div className="content-item edit-resume">
                     <EditResumeMenu page="photo" />
                     <h3>Photograph</h3>
                     <div className="photograph">

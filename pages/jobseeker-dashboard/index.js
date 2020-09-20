@@ -5,7 +5,9 @@ import JobseekerLayout from '../../components/JobseekerLayout';
 const JobseekerDashboard = (props) => {
     return (
         <JobseekerLayout>
-            Dashboard
+            <div className="content-item">
+                Dashboard
+            </div>
         </JobseekerLayout>
     )
 }

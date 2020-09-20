@@ -15,7 +15,7 @@ import {  } from '@fortawesome/free-regular-svg-icons';
 const Others = (props) => {
     return (
         <JobseekerLayout>
-            <div className="edit-resume">
+            <div className="content-item edit-resume">
                 <EditResumeMenu page="others" />
                 <h3>Languages</h3>
                 <div className="languages">

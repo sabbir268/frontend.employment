@@ -9,7 +9,7 @@ import { faEnvelope, faMap } from '@fortawesome/free-regular-svg-icons';
 const ViewResume = (props) => {
     return (
         <JobseekerLayout>
-            <div className="view-resume">
+            <div className="content-item view-resume">
                 <div className="row">
                     <div className="col-sm-12">
                         <div className="profile">

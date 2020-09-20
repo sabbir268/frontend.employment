@@ -93,10 +93,7 @@ const JobseekerLayout = (props) => {
             <div className="dashboard jobseeker section-bg">
                 <div className="sidebar">
                     <ul className="menu">
-
-
-
-                        <li><a href="/jobseeker-dashboard"><FontAwesomeIcon icon={faHome} /> Dashboard</a></li>
+                        <li><Link href="/jobseeker-dashboard"><a><FontAwesomeIcon icon={faHome} /> Dashboard</a></Link></li>
                         <li className={(activeClass === 'resume') ? 'active' : ''}>
                             <a href="#" onClick={addActiveClass.bind(this, 'resume')}><FontAwesomeIcon icon={faEdit} /> Resume <FontAwesomeIcon icon={faChevronRight} className="right-icon" /></a>
                             <ul className="submenu">
@@ -104,7 +101,7 @@ const JobseekerLayout = (props) => {
                                 <li><Link href="/jobseeker-dashboard/edit-resume"><a>Edit Resume</a></Link></li>
                                 <li><Link href="/jobseeker-dashboard/upload-resume"><a>Upload Resume</a></Link></li>
                                 <li><Link href="/jobseeker-dashboard/upload-resume"><a>Download Resume</a></Link></li>
-                                <li><Link href="/jobseeker-dashboard/upload-resume"><a>Email Resume</a></Link></li>
+                                <li><Link href="/jobseeker-dashboard/email-resume"><a>Email Resume</a></Link></li>
                                 <li><Link href="/jobseeker-dashboard/cover-letter"><a>Cover Letter</a></Link></li>
                             </ul>
                         </li>

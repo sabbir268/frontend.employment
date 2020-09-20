@@ -94,7 +94,7 @@ class JobseekerDashboard extends React.Component {
 
         return (
             <JobseekerLayout>
-                <div className="edit-resume">
+                <div className="content-item edit-resume">
                     <EditResumeMenu page="personal" />
                     <h3>Personal Informations</h3>
                     <div className="row">

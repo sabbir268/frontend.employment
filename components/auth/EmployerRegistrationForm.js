@@ -48,7 +48,11 @@ class EmployerRegistrationForm extends React.Component {
             how_known: '',
             terms: false,
             pricing_policy: false,
+            website: '',
+            facebook: '',
+            linkedin: '',
             recaptcha: '',
+            firend_email: '',
             errors: {}
         }
     }
@@ -158,6 +162,10 @@ class EmployerRegistrationForm extends React.Component {
             formIsValid = false;
             errors.pricing_policy = "This is required.";
         }
+        if (fields.firend_email && !ValidateEmail(fields.firend_email)) {
+            formIsValid = false;
+            errors.firend_email = "Invalid Email address";
+        }
 
         this.setState({ errors: errors });
         return formIsValid;
@@ -172,7 +180,7 @@ class EmployerRegistrationForm extends React.Component {
     }
 
     render() {
-        const { company_name, company_location, company_type, description, trade_license, tin_no, rl_no, contact_name, contact_designation, contact_no, email, password, confirm_password, how_known, terms, pricing_policy, recaptcha, errors } = this.state;
+        const { company_name, company_location, company_type, description, trade_license, tin_no, rl_no, contact_name, contact_designation, contact_no, email, password, confirm_password, how_known, terms, pricing_policy, website, facebook, linkedin, firend_email, recaptcha, errors } = this.state;
         return (
             <form onSubmit={this.handleSubmit} noValidate>
                 <h4>Company Information</h4>
@@ -244,6 +252,24 @@ class EmployerRegistrationForm extends React.Component {
                             {errors.rl_no && <div className="error-message">{errors.rl_no}</div>}
                         </div>
                     </div>
+                    <div className="col-sm-6">
+                        <div className="form-group">
+                            <input onChange={this.handleChange} value={website} type="text" name="website" placeholder="Company's Website" className={`form-control ${errors.website ? 'error' : ''}`} />
+                            {errors.website && <div className="error-message">{errors.website}</div>}
+                        </div>
+                    </div>
+                    <div className="col-sm-12">
+                        <div className="form-group">
+                            <input onChange={this.handleChange} value={facebook} type="text" name="facebook" placeholder="Company's facebook profile" className={`form-control ${errors.facebook ? 'error' : ''}`} />
+                            {errors.facebook && <div className="error-message">{errors.facebook}</div>}
+                        </div>
+                    </div>
+                    <div className="col-sm-12">
+                        <div className="form-group">
+                            <input onChange={this.handleChange} value={linkedin} type="text" name="facebook" placeholder="Company's linkedin profile" className={`form-control ${errors.linkedin ? 'error' : ''}`} />
+                            {errors.linkedin && <div className="error-message">{errors.linkedin}</div>}
+                        </div>
+                    </div>
                 </div>
 
                 <h4 className="mt-3">Contact Person's Information</h4>
@@ -290,11 +316,26 @@ class EmployerRegistrationForm extends React.Component {
                         </div>
                     </div>
                     <div className="col-sm-12">
-                        <div className="form-group">
-                            <input onChange={this.handleChange} value={how_known} type="text" name="how_known" placeholder="How did you know about Employment" className={`form-control ${errors.how_known ? 'error' : ''}`} />
+                        <div className="form-group select">
+                            <select onChange={this.handleChange} value={how_known} name="how_known" className={`form-control ${errors.how_known ? 'error' : ''}`}>
+                                <option value="">How did you know about Employment</option>
+                                <option value="facebook">Facebook</option>
+                                <option value="google">Google</option>
+                                <option value="linkedin">Linkedin</option>
+                                <option value="friend">From a Friend</option>
+                            </select>
                             {errors.how_known && <div className="error-message">{errors.how_known}</div>}
                         </div>
                     </div>
+                    {
+                        how_known === 'friend' &&
+                        <div className="col-sm-12">
+                            <div className="form-group">
+                                <input onChange={this.handleChange} value={firend_email} type="email" name="firend_email" placeholder="Please add your firend's Email" className={`form-control ${errors.firend_email ? 'error' : ''}`} />
+                                {errors.firend_email && <div className="error-message">{errors.firend_email}</div>}
+                            </div>
+                        </div>
+                    }
                     <div className="col-sm-12">
                         <label className={`custom-checkbox ${errors.terms ? 'error' : ''}`}>I agree to employment.com.bd Terms of use. <a href="#">Terms & Conditions</a>
                             <input type="checkbox" name="terms" checked={terms} onChange={this.handleChange} />
