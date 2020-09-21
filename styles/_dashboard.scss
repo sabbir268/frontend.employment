@@ -1,21 +1,23 @@
 .dashboard {
-    padding: 40px;
     overflow: hidden;
     .sidebar {
+        background: #515997;
         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
-        background-color: #ffffff;
-        border-radius: 3px;
-        margin-bottom: 20px;
         width: 250px;
-        float: left;
+        color: #fff;
+        padding: 20px 10px;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 72px;
         .menu {
             > li {
                 list-style: none;
                 line-height: 30px;
-                border-bottom: 1px solid $border-color;
+                // border-bottom: 1px solid #ffffff;
                 a {
                     display: block;
-                    color: $text-color;
+                    color: #ffffff;
                     text-decoration: none;
                     padding: 10px 15px;
                     svg {
@@ -31,7 +33,7 @@
                     }
                 }
                 .submenu {
-                    padding-left: 20px;
+                    padding-left: 22px;
                     margin-bottom: 10px;
                     // display: none;
                     li {
@@ -45,14 +47,14 @@
                             position: absolute;
                             display: block;
                             width: 1px;
-                            border-left: 1px dashed rgba(12, 12, 12, 0.3);
+                            border-left: 1px dashed #ffffff;
                             z-index: 1;
                         }
                         &::after {
                             content: "";
                             height: 1px;
                             width: 16px;
-                            border-bottom: 1px dashed rgba(12, 12, 12, 0.3);
+                            border-bottom: 1px dashed #ffffff;
                             position: absolute;
                             left: 0;
                             top: 20px;
@@ -80,7 +82,9 @@
         }
     }
     .dashboard-content {
-        width: calc(100% - 280px);
+        width: calc(100% - 250px);
+        padding: 30px;
+        margin-top: 72px;
         float: right;
         .content-item {
             box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
@@ -92,6 +96,42 @@
                 font-family: "Roboto", sans-serif;
                 font-size: 26px;
                 font-weight: 500;
+            }
+        }
+        .profile-summary {
+            padding: 41px 30px;
+            .chart {
+                height: 150px;
+                width: 150px;
+                margin: 0 auto 10px;
+                text-align: center;
+                font-size: 40px;
+                border: 10px solid #17a2b8;
+                border-radius: 100%;
+                line-height: 3.3;
+                color: #6acd75;
+                @include box-shadow(0px 0px 4px 2px #6acd75);
+            }
+            .chart-text {
+                text-align: center;
+                font-weight: 500;
+                font-size: 16px;
+                color: #333333;
+                margin-bottom: 30px;
+            }
+            ul {
+                display: flex;
+                justify-content: space-between;
+                li {
+                    list-style: none;
+                    line-height: 30px;
+                    text-align: center;
+                    span {
+                        display: block;
+                        font-weight: 500;
+                        color: #333333;
+                    }
+                }
             }
         }
         .summery-item {
@@ -140,6 +180,38 @@
                 background: rgba($color: #20639b, $alpha: 0.4);
                 color: #20639b;
             }
+        }
+    }
+    .start-job{
+        text-align: center;
+        margin-bottom: 0px!important;
+        h3{
+            font-weight: 400;
+        }
+        ul{
+            margin-bottom: 10px;
+            font-size: 14px;
+            li{
+                list-style: none;
+                display: inline-block;
+                margin-right: 5px;
+                border: 3px solid $green;
+                border-radius: 3px;
+                padding: 5px 15px;
+                cursor: pointer;
+                &.active{
+                    background: $green;
+                    color: #ffffff;
+                }
+            }
+        }
+        p{
+            font-size: 13px;
+        }
+    }
+    .latest-jobs{
+        td{
+            line-height: 40px;
         }
     }
     .activity-logs {
@@ -247,6 +319,7 @@
         }
     }
     .table {
+        margin-bottom: 0px;
         td {
             a {
                 color: $primary-color;
@@ -255,11 +328,12 @@
             }
             h4 {
                 font-size: 18px;
-                margin-bottom: 10px;
+                margin-bottom: 0px;
             }
             p {
                 font-size: 14px;
                 font-weight: 500;
+                margin-bottom: 0px;
             }
             &.active {
                 color: #17a2b8;

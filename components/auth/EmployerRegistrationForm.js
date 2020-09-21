@@ -50,9 +50,11 @@ class EmployerRegistrationForm extends React.Component {
             pricing_policy: false,
             website: '',
             facebook: '',
+            youtube: '',
             linkedin: '',
             recaptcha: '',
             firend_email: '',
+            user_id_type: '',
             errors: {}
         }
     }
@@ -180,7 +182,7 @@ class EmployerRegistrationForm extends React.Component {
     }
 
     render() {
-        const { company_name, company_location, company_type, description, trade_license, tin_no, rl_no, contact_name, contact_designation, contact_no, email, password, confirm_password, how_known, terms, pricing_policy, website, facebook, linkedin, firend_email, recaptcha, errors } = this.state;
+        const { company_name, company_location, company_type, description, trade_license, tin_no, rl_no, contact_name, contact_designation, contact_no, email, password, confirm_password, how_known, terms, pricing_policy, website, facebook, linkedin, firend_email, youtube, user_id_type, recaptcha, errors } = this.state;
         return (
             <form onSubmit={this.handleSubmit} noValidate>
                 <h4>Company Information</h4>
@@ -266,8 +268,14 @@ class EmployerRegistrationForm extends React.Component {
                     </div>
                     <div className="col-sm-12">
                         <div className="form-group">
-                            <input onChange={this.handleChange} value={linkedin} type="text" name="facebook" placeholder="Company's linkedin profile" className={`form-control ${errors.linkedin ? 'error' : ''}`} />
+                            <input onChange={this.handleChange} value={linkedin} type="text" name="linkedin" placeholder="Company's linkedin profile" className={`form-control ${errors.linkedin ? 'error' : ''}`} />
                             {errors.linkedin && <div className="error-message">{errors.linkedin}</div>}
+                        </div>
+                    </div>
+                    <div className="col-sm-12">
+                        <div className="form-group">
+                            <input onChange={this.handleChange} value={youtube} type="text" name="youtube" placeholder="Company's youtube channel" className={`form-control ${errors.linkedin ? 'error' : ''}`} />
+                            {errors.youtube && <div className="error-message">{errors.youtube}</div>}
                         </div>
                     </div>
                 </div>
@@ -294,12 +302,14 @@ class EmployerRegistrationForm extends React.Component {
                                 onChange={this.handleSelectChange.bind(this, 'contact_no')}
                                 containerClass={`phone-input ${errors.contact_no ? 'error' : ''}`}
                             />
+                            <div className="make-user-id"><span className={user_id_type === 'phone' ? 'active' : ''} onClick={() => {this.setState({ user_id_type: 'phone'})}}>Make User ID</span></div>
                             {errors.contact_no && <div className="error-message">{errors.contact_no}</div>}
                         </div>
                     </div>
                     <div className="col-sm-6">
                         <div className="form-group">
                             <input onChange={this.handleChange} value={email} type="email" name="email" placeholder="Email Address" className={`form-control ${errors.email ? 'error' : ''}`} />
+                            <div className="make-user-id"><span className={user_id_type === 'email' ? 'active' : ''} onClick={() => {this.setState({ user_id_type: 'email'})}}>Make User ID</span></div>
                             {errors.email && <div className="error-message">{errors.email}</div>}
                         </div>
                     </div>

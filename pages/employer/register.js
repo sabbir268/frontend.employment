@@ -8,7 +8,7 @@ import EmployerRegistrationForm from '../../components/auth/EmployerRegistration
 const EmployerRegistration = (props) => {
     return (
         <Layout>
-            <div className="section-padding section-bg register-page employer">
+            <div className="pt-5 pb-5 section-bg register-page employer">
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-8">

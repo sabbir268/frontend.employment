@@ -78,7 +78,7 @@ const EmployerDashboard = (props) => {
             </div>
             <div className="row">
                 <div className="col-sm-7">
-                    <div className="content-item">
+                    <div className="content-item latest-jobs">
                         <h2 className="title">Latest Jobs</h2>
                         <div className="table-responsive">
                             <table className="table border">

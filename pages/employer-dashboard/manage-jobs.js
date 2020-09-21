@@ -30,7 +30,7 @@ const EmployerJobList = (props) => {
                                 </td>
                                 <td><span className="badge badge-warning p-2">Part Time</span></td>
                                 <td>25 <a href="#">(Manage)</a></td>
-                                <td>Active</td>
+                                <td className="active">Active</td>
                                 <td>25-09-2020</td>
                                 <td>
                                     <button className="btn"><FontAwesomeIcon icon={faEye} /></button>
@@ -45,7 +45,7 @@ const EmployerJobList = (props) => {
                                 </td>
                                 <td><span className="badge badge-info p-2">Full Time</span></td>
                                 <td>25 <a href="#">(Manage)</a></td>
-                                <td>Active</td>
+                                <td className="drafted">Drafted</td>
                                 <td>25-09-2020</td>
                                 <td>
                                     <button className="btn"><FontAwesomeIcon icon={faEye} /></button>
@@ -60,7 +60,7 @@ const EmployerJobList = (props) => {
                                 </td>
                                 <td><span className="badge badge-info p-2">Full Time</span></td>
                                 <td>25 <a href="#">(Manage)</a></td>
-                                <td>Active</td>
+                                <td className="pending">Pending</td>
                                 <td>25-09-2020</td>
                                 <td>
                                     <button className="btn"><FontAwesomeIcon icon={faEye} /></button>
@@ -75,7 +75,7 @@ const EmployerJobList = (props) => {
                                 </td>
                                 <td><span className="badge badge-info p-2">Full Time</span></td>
                                 <td>25 <a href="#">(Manage)</a></td>
-                                <td>Active</td>
+                                <td className="active">Active</td>
                                 <td>25-09-2020</td>
                                 <td>
                                     <button className="btn"><FontAwesomeIcon icon={faEye} /></button>
@@ -90,7 +90,7 @@ const EmployerJobList = (props) => {
                                 </td>
                                 <td><span className="badge badge-info p-2">Full Time</span></td>
                                 <td>25 <a href="#">(Manage)</a></td>
-                                <td>Active</td>
+                                <td className="active">Active</td>
                                 <td>25-09-2020</td>
                                 <td>
                                     <button className="btn"><FontAwesomeIcon icon={faEye} /></button>
