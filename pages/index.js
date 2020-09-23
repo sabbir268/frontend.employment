@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import BannerSearch from '../components/BannerSearch';
 
@@ -10,10 +10,31 @@ SwiperCore.use([Pagination]);
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLongArrowAltRight, faMapMarkerAlt, faFilter, faSuitcase, faBuilding, faQuoteRight, faAngleRight, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowAltRight, faMapMarkerAlt, faFilter, faSuitcase, faBuilding, faQuoteRight, faAngleRight, faPlay, faEllipsisH, faAngleDown, faCalendarAlt, faTag } from '@fortawesome/free-solid-svg-icons';
 import { faClock, faBell } from '@fortawesome/free-regular-svg-icons';
 
+
+
 const Home = (props) => {
+    const [moreJobsId, setMoreJobsId] = useState(null);
+    const moreJobsRef = useRef(null);
+    const moreJobsButtonRef = useRef(null);
+
+    const clickListener = (e) => {
+        if (moreJobsRef.current && !moreJobsRef.current.contains(e.target) && !moreJobsButtonRef.current.contains(e.target)) {
+            setMoreJobsId(null);
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('click', clickListener)
+        return () => {
+            document.removeEventListener('click', clickListener)
+        }
+    }, [])
+
+
+
     return (
         <Layout>
             <Head>
@@ -22,6 +43,186 @@ const Home = (props) => {
             </Head>
             <main className="homepage">
                 <BannerSearch />
+
+                <section className="promotions">
+                    <div className="container">
+                        <div className="row sm-gutters">
+                            <div className="col-sm-3">
+                                <div className="promotion-item">
+                                    <a href="#">
+                                        <img src="/images/companies/1.png" alt="logo" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="promotion-item">
+                                    <a href="#">
+                                        <img src="/images/companies/2.png" alt="logo" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="promotion-item">
+                                    <a href="#">
+                                        <img src="/images/companies/3.png" alt="logo" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-sm-3">
+                                <div className="promotion-item">
+                                    <a href="#">
+                                        <img src="/images/companies/4.png" alt="logo" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="hot-jobs section-padding">
+                    <div className="container">
+                        <h1 className="section-title"><span>Premium</span> Jobs</h1>
+                        <div className="row sm-gutters">
+                            <div className="col-md-6 col-lg-3">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <button className="more-jobs-icon" onClick={() => { setMoreJobsId(1) }} ref={moreJobsButtonRef} title="More Jobs">
+                                        <FontAwesomeIcon icon={faAngleDown} />
+                                    </button>
+                                    <div className="content">
+                                        <h4><a href="#">Senior Executive</a></h4>
+                                        <ul>
+                                            <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
+                                            <li><a href="#">Dhaka, Bangladesh</a></li>
+                                        </ul>
+                                        <div className="time">2 weeks ago</div>
+                                    </div>
+                                    {
+                                        moreJobsId === 1 &&
+                                        <ul className="more-jobs" ref={moreJobsRef}>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Marketing Officer</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Project Manager</a></li>
+                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Account Officer</a></li>
+                                        </ul>
+                                    }
+
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-3">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Senior Executive</a></h4>
+                                        <ul>
+                                            <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
+                                            <li><a href="#">Dhaka, Bangladesh</a></li>
+                                        </ul>
+                                        <div className="time">2 weeks ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-3">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Senior Executive</a></h4>
+                                        <ul>
+                                            <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
+                                            <li><a href="#">Dhaka, Bangladesh</a></li>
+                                        </ul>
+                                        <div className="time">2 weeks ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-3">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Senior Executive</a></h4>
+                                        <ul>
+                                            <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
+                                            <li><a href="#">Dhaka, Bangladesh</a></li>
+                                        </ul>
+                                        <div className="time">2 weeks ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-3">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Senior Executive</a></h4>
+                                        <ul>
+                                            <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
+                                            <li><a href="#">Dhaka, Bangladesh</a></li>
+                                        </ul>
+                                        <div className="time">2 weeks ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-3">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Senior Executive</a></h4>
+                                        <ul>
+                                            <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
+                                            <li><a href="#">Dhaka, Bangladesh</a></li>
+                                        </ul>
+                                        <div className="time">2 weeks ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-3">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Senior Executive</a></h4>
+                                        <ul>
+                                            <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
+                                            <li><a href="#">Dhaka, Bangladesh</a></li>
+                                        </ul>
+                                        <div className="time">2 weeks ago</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-lg-3">
+                                <div className="job-item">
+                                    <div className="image">
+                                        <img src="/images/logos/walton.jpg" alt="logo" />
+                                    </div>
+                                    <div className="content">
+                                        <h4><a href="#">Senior Executive</a></h4>
+                                        <ul>
+                                            <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
+                                            <li><a href="#">Dhaka, Bangladesh</a></li>
+                                        </ul>
+                                        <div className="time">2 weeks ago</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className="text-center mt-2">
+                            <a href="#" className="btn btn-green">View All</a>
+                        </div>
+                    </div>
+                </section>
 
                 <section className="build-team section-padding">
                     <div className="container">
@@ -115,243 +316,6 @@ const Home = (props) => {
                     </div>
                 </section>
 
-                <section className="hot-jobs section-padding section-bg">
-                    <div className="container">
-                        <h1 className="section-title"><span>Premium</span> Job Search</h1>
-                        <div className="row sm-gutters">
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-6 col-lg-4">
-                                <div className="job-item">
-                                    <div className="image">
-                                        <img src="/images/logos/walton.jpg" alt="logo" />
-                                    </div>
-                                    <div className="content">
-                                        <h4><a href="#">Walton Hi-Tech Industries Ltd.</a></h4>
-                                        <ul>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Manager</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Senior Executive</a></li>
-                                            <li><a href="#"><FontAwesomeIcon icon={faAngleRight} /> Data Entry Operator</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div className="text-center mt-2">
-                            <a href="#" className="btn btn-green">View All</a>
-                        </div>
-                    </div>
-                </section>
-
                 {/* <section className="top-categories section-padding section-bg">
                     <div className="container">
                         <h1 className="section-title">Top <span>Job</span> Categories</h1>
@@ -422,8 +386,10 @@ const Home = (props) => {
                                         <div className="image icon-design">
                                             <i className="flaticon-human-resources"></i>
                                         </div>
-                                        <h3><CountUp end={3000} />+</h3>
-                                        <p>Candidates</p>
+                                        <div className="content">
+                                            <h3><CountUp end={3000} />+</h3>
+                                            <p>Candidates</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-sm-3">
@@ -431,8 +397,10 @@ const Home = (props) => {
                                         <div className="image icon-design">
                                             <i className="flaticon-suitcase"></i>
                                         </div>
-                                        <h3><CountUp end={5000} />+</h3>
-                                        <p>Jobs</p>
+                                        <div className="content">
+                                            <h3><CountUp end={5000} />+</h3>
+                                            <p>Jobs</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-sm-3">
@@ -440,8 +408,10 @@ const Home = (props) => {
                                         <div className="image icon-design">
                                             <i className="flaticon-businessman-1"></i>
                                         </div>
-                                        <h3><CountUp end={1000} />+</h3>
-                                        <p>Employer</p>
+                                        <div className="content">
+                                            <h3><CountUp end={1000} />+</h3>
+                                            <p>Employer</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="col-sm-3">
@@ -449,8 +419,10 @@ const Home = (props) => {
                                         <div className="image icon-design">
                                             <i className="flaticon-web"></i>
                                         </div>
-                                        <h3><CountUp end={500} />+</h3>
-                                        <p>Courses</p>
+                                        <div className="content">
+                                            <h3><CountUp end={500} />+</h3>
+                                            <p>Courses</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -525,133 +497,6 @@ const Home = (props) => {
                             </div>
                         </div>
                     </div>
-                </section>
-                <section className="cv-collection section-padding">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-sm-6">
-                                <div className="persons">
-                                    <div className="person-item one">
-                                        <img src="/images/face.jpg" alt="person" />
-                                    </div>
-                                    <div className="person-item two">
-                                        <img src="/images/face-2.jpg" alt="person" />
-                                    </div>
-                                    <div className="person-item three">
-                                        <img src="/images/face-3.jpg" alt="person" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-sm-6">
-                                <h1>Minimise your talent hunt process from our rich CV collection.</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempus fringilla ipsum, vel pulvinar est porttitor et. Mauris libero massa, interdum eu tortor eu, iaculis elementum mi. Quisque euismod elementum eros sed pellentesque.</p>
-                                <p>Praesent at metus nec erat convallis pharetra. Integer quis urna egestas, feugiat eros eget, ultricies mi. Curabitur aliquam nunc vel nibh condimentum, et varius odio ultrices. Integer luctus arcu vitae lacus fermentum tincidunt. Curabitur rhoncus ante non ornare tempor.</p>
-                                <a href="#" className="btn btn-default">Register</a>
-                            </div>
-                        </div>
-                    </div>
-                </section> */}
-
-
-                {/* <section className="recent-jobs section-padding">
-                    <div className="container">
-                        <h1 className="section-title">Recent Jobs</h1>
-                        <div className="job-list">
-                            <div className="job-item">
-                                <div className="logo">
-                                    <img src="/images/company.svg" alt="company logo" />
-                                </div>
-                                <div className="content">
-                                    <h3><a href="#">Marketing and Communications</a></h3>
-                                    <ul>
-                                        <li><FontAwesomeIcon icon={faBuilding} /> <a href="#">Pendragon Green Ltd</a></li>
-                                        <li><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh</li>
-                                        <li><FontAwesomeIcon icon={faFilter} /> IT & Telecoms</li>
-                                        <li><FontAwesomeIcon icon={faSuitcase} /> Full-Time</li>
-                                    </ul>
-                                </div>
-                                <div className="apply">
-                                    <a href="#" className="btn btn-green">Apply Now</a>
-                                    <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
-                                </div>
-                            </div>
-                            <div className="job-item">
-                                <div className="logo">
-                                    <img src="/images/company.svg" alt="company logo" />
-                                </div>
-                                <div className="content">
-                                    <h3><a href="#">Marketing and Communications</a></h3>
-                                    <ul>
-                                        <li><FontAwesomeIcon icon={faBuilding} /> <a href="#">Pendragon Green Ltd</a></li>
-                                        <li><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh</li>
-                                        <li><FontAwesomeIcon icon={faFilter} /> IT & Telecoms</li>
-                                        <li><FontAwesomeIcon icon={faSuitcase} /> Full-Time</li>
-                                    </ul>
-                                </div>
-                                <div className="apply">
-                                    <a href="#" className="btn btn-green">Apply Now</a>
-                                    <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
-                                </div>
-                            </div>
-                            <div className="job-item">
-                                <div className="logo">
-                                    <img src="/images/company.svg" alt="company logo" />
-                                </div>
-                                <div className="content">
-                                    <h3><a href="#">Marketing and Communications</a></h3>
-                                    <ul>
-                                        <li><FontAwesomeIcon icon={faBuilding} /> <a href="#">Pendragon Green Ltd</a></li>
-                                        <li><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh</li>
-                                        <li><FontAwesomeIcon icon={faFilter} /> IT & Telecoms</li>
-                                        <li><FontAwesomeIcon icon={faSuitcase} /> Full-Time</li>
-                                    </ul>
-                                </div>
-                                <div className="apply">
-                                    <a href="#" className="btn btn-green">Apply Now</a>
-                                    <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
-                                </div>
-                            </div>
-                            <div className="job-item">
-                                <div className="logo">
-                                    <img src="/images/company.svg" alt="company logo" />
-                                </div>
-                                <div className="content">
-                                    <h3><a href="#">Marketing and Communications</a></h3>
-                                    <ul>
-                                        <li><FontAwesomeIcon icon={faBuilding} /> <a href="#">Pendragon Green Ltd</a></li>
-                                        <li><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh</li>
-                                        <li><FontAwesomeIcon icon={faFilter} /> IT & Telecoms</li>
-                                        <li><FontAwesomeIcon icon={faSuitcase} /> Full-Time</li>
-                                    </ul>
-                                </div>
-                                <div className="apply">
-                                    <a href="#" className="btn btn-green">Apply Now</a>
-                                    <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
-                                </div>
-                            </div>
-                            <div className="job-item">
-                                <div className="logo">
-                                    <img src="/images/company.svg" alt="company logo" />
-                                </div>
-                                <div className="content">
-                                    <h3><a href="#">Marketing and Communications</a></h3>
-                                    <ul>
-                                        <li><FontAwesomeIcon icon={faBuilding} /> <a href="#">Pendragon Green Ltd</a></li>
-                                        <li><FontAwesomeIcon icon={faMapMarkerAlt} /> Dhaka, Bangladesh</li>
-                                        <li><FontAwesomeIcon icon={faFilter} /> IT & Telecoms</li>
-                                        <li><FontAwesomeIcon icon={faSuitcase} /> Full-Time</li>
-                                    </ul>
-                                </div>
-                                <div className="apply">
-                                    <a href="#" className="btn btn-green">Apply Now</a>
-                                    <p><FontAwesomeIcon icon={faClock} /> 1M Ago</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="text-center mt-4">
-                            <a href="#" className="btn btn-default">View All</a>
-                        </div>
-                    </div>
                 </section> */}
 
 
@@ -689,23 +534,6 @@ const Home = (props) => {
                         </div>
                         <div className="video">
                             <a href="#"><FontAwesomeIcon icon={faPlay} /></a>
-                        </div>
-                    </div>
-                </section>
-
-                {/* <section className="video section-padding">
-                    <div className="container">
-                        <h1 className="section-title">Video</h1>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/hwb4ozNE6w0" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                    </div>
-                </section> */}
-
-
-                <section className=" section-padding">
-                    <div className="container">
-                        <h1 className="section-title">What Our Clients Says</h1>
-                        <div className="text-center">
-                            <iframe width="900" height="500" src="https://www.youtube.com/embed/GXI0l3yqBrA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                     </div>
                 </section>
@@ -776,53 +604,172 @@ const Home = (props) => {
                     </div>
                 </section>
 
-                <section className="testimonial section-padding section-bg">
+                <section className="testimonial section-padding">
                     <div className="container">
-                        <h1 className="section-title">JobSeekers Says</h1>
-                        <div className="testimonials">
-                            <Swiper
-                                slidesPerView={1}
-                                spaceBetween={0}
-                                pagination={{ clickable: true }}
-                                breakpoints={{
-                                    768: {
-                                        slidesPerView: 2,
-                                        spaceBetween: 20
-                                    }
-                                }}
-                                onSlideChange={() => console.log('slide change')}
-                                onSwiper={(swiper) => console.log(swiper)} >
-                                <SwiperSlide>
-                                    <div className="testimonial-item">
-                                        <div className="image">
-                                            <img src="/images/clients/1.jpg" alt="client" />
-                                        </div>
-                                        <FontAwesomeIcon icon={faQuoteRight} className="icon" />
-                                        <h3>Babriel Nolan <span>CEO</span></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                        <h1 className="section-title">Happy Faces</h1>
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <h2 className="text-center">Employer</h2>
+                                <div className="testimonials">
+                                    <Swiper
+                                        slidesPerView={1}
+                                        spaceBetween={0}
+                                        pagination={{ clickable: true }}
+                                        breakpoints={{
+                                            768: {
+                                                slidesPerView: 1,
+                                                spaceBetween: 0
+                                            }
+                                        }}
+                                        onSlideChange={() => console.log('slide change')}
+                                        onSwiper={(swiper) => console.log(swiper)} >
+                                        <SwiperSlide>
+                                            <div className="testimonial-item">
+                                                <div className="image">
+                                                    <img src="/images/clients/1.jpg" alt="client" />
+                                                </div>
+                                                <div className="video-icon">
+                                                    <a href="#"><FontAwesomeIcon icon={faPlay} /></a>
+                                                </div>
+                                                <h3>Babriel Nolan <span>CEO</span></h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="testimonial-item">
+                                                <div className="image">
+                                                    <img src="/images/clients/2.jpg" alt="client" />
+                                                </div>
+                                                <div className="video-icon">
+                                                    <a href="#"><FontAwesomeIcon icon={faPlay} /></a>
+                                                </div>
+                                                <h3>Olivia Reynolds <span>Software Engineers</span></h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="testimonial-item">
+                                                <div className="image">
+                                                    <img src="/images/clients/3.jpg" alt="client" />
+                                                </div>
+                                                <div className="video-icon">
+                                                    <a href="#"><FontAwesomeIcon icon={faPlay} /></a>
+                                                </div>
+                                                <h3>Rosie Marshall <span>Photograph</span></h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                            </div>
+                                        </SwiperSlide>
+                                    </Swiper>
+                                </div>
+                            </div>
+                            <div className="col-sm-6">
+                                <h2 className="text-center">Employer</h2>
+                                <div className="testimonials">
+                                    <Swiper
+                                        slidesPerView={1}
+                                        spaceBetween={0}
+                                        pagination={{ clickable: true }}
+                                        breakpoints={{
+                                            768: {
+                                                slidesPerView: 1,
+                                                spaceBetween: 0
+                                            }
+                                        }}
+                                        onSlideChange={() => console.log('slide change')}
+                                        onSwiper={(swiper) => console.log(swiper)} >
+                                        <SwiperSlide>
+                                            <div className="testimonial-item">
+                                                <div className="image">
+                                                    <img src="/images/clients/1.jpg" alt="client" />
+                                                </div>
+                                                <div className="video-icon">
+                                                    <a href="#"><FontAwesomeIcon icon={faPlay} /></a>
+                                                </div>
+                                                <h3>Babriel Nolan <span>CEO</span></h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="testimonial-item">
+                                                <div className="image">
+                                                    <img src="/images/clients/2.jpg" alt="client" />
+                                                </div>
+                                                <div className="video-icon">
+                                                    <a href="#"><FontAwesomeIcon icon={faPlay} /></a>
+                                                </div>
+                                                <h3>Olivia Reynolds <span>Software Engineers</span></h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                            </div>
+                                        </SwiperSlide>
+                                        <SwiperSlide>
+                                            <div className="testimonial-item">
+                                                <div className="image">
+                                                    <img src="/images/clients/3.jpg" alt="client" />
+                                                </div>
+                                                <div className="video-icon">
+                                                    <a href="#"><FontAwesomeIcon icon={faPlay} /></a>
+                                                </div>
+                                                <h3>Rosie Marshall <span>Photograph</span></h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                            </div>
+                                        </SwiperSlide>
+                                    </Swiper>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section className="courses">
+                    <div className="container">
+                        <h1 className="section-title">Our Courses</h1>
+                        <div className="row">
+                            <div className="col-sm-4">
+                                <div className="course-item">
+                                    <div className="image">
+                                        <img src="/icons/excel.png" alt="courses" />
                                     </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="testimonial-item">
-                                        <div className="image">
-                                            <img src="/images/clients/2.jpg" alt="client" />
-                                        </div>
-                                        <FontAwesomeIcon icon={faQuoteRight} className="icon" />
-                                        <h3>Olivia Reynolds <span>Software Engineers</span></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                    <div className="content">
+                                        <h3 className="title"><a href="#">Microsoft Excel for Data Analyst</a></h3>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, voluptates. Facere iste laboriosam, quas commodi amet nihil voluptates earum.</p>
+                                        <ul>
+                                            <li><FontAwesomeIcon icon={faCalendarAlt} /> 22-09-2020</li>
+                                            <li><FontAwesomeIcon icon={faTag} /> Marketing/ Sales</li>
+                                        </ul>
                                     </div>
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <div className="testimonial-item">
-                                        <div className="image">
-                                            <img src="/images/clients/3.jpg" alt="client" />
-                                        </div>
-                                        <FontAwesomeIcon icon={faQuoteRight} className="icon" />
-                                        <h3>Rosie Marshall <span>Photograph</span></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit tellus tortor, ac commodo dolor placerat vel. Orci varius natoque penatibus et magnis.</p>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="course-item">
+                                    <div className="image">
+                                        <img src="/icons/brain.png" alt="courses" />
                                     </div>
-                                </SwiperSlide>
-                            </Swiper>
+                                    <div className="content">
+                                        <h3 className="title"><a href="#">AI & Deep Learning with Tensor Flow</a></h3>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, voluptates. Facere iste laboriosam, quas commodi amet nihil voluptates earum.</p>
+                                        <ul>
+                                            <li><FontAwesomeIcon icon={faCalendarAlt} /> 22-09-2020</li>
+                                            <li><FontAwesomeIcon icon={faTag} /> Marketing/ Sales</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="course-item">
+                                    <div className="image">
+                                        <img src="/icons/server.png" alt="courses" />
+                                    </div>
+                                    <div className="content">
+                                        <h3 className="title"><a href="#">AWS Architect Certification Training Combo</a></h3>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, voluptates. Facere iste laboriosam, quas commodi amet nihil voluptates earum.</p>
+                                        <ul>
+                                            <li><FontAwesomeIcon icon={faCalendarAlt} /> 22-09-2020</li>
+                                            <li><FontAwesomeIcon icon={faTag} /> Marketing/ Sales</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

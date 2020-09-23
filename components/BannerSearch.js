@@ -37,7 +37,7 @@ class BannerSearch extends React.Component {
                                                 {!this.state.advanceSearch && <button type="submit"><i className="flaticon-magnifying-glass"></i></button>}
                                                 {!this.state.advanceSearch && <p onClick={this.showAdavanceSearch} className="advance-button">Advance Search</p>}
                                             </div>
-                                            <p className="are-you"><Link href="/auth/register"><a href="#">Are you Hiring? Post a Job Now.</a></Link></p>
+                                            <p className="are-you"><Link href="/employer/register"><a>Are you Hiring? Post a Job Now.</a></Link></p>
                                         </div>
                                         {this.state.advanceSearch &&
                                             <>
