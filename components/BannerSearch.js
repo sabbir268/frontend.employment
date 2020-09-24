@@ -33,7 +33,7 @@ class BannerSearch extends React.Component {
                                     <div className="row sm-gutters">
                                         <div className={this.state.advanceSearch ? 'col-sm-4' : 'col-sm-7'} style={{ transition: .5 + 's' }}>
                                             <div className="form-group">
-                                                <input type="text" name="search" placeholder="Keywords, Job Title, Company or Location" className="form-control" />
+                                                <input type="text" name="search" placeholder="Keywords, Profession or Name" className="form-control" />
                                                 {!this.state.advanceSearch && <button type="submit"><i className="flaticon-magnifying-glass"></i></button>}
                                                 {!this.state.advanceSearch && <p onClick={this.showAdavanceSearch} className="advance-button">Advance Search</p>}
                                             </div>

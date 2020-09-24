@@ -309,8 +309,23 @@
 					}
 				}
 			}
-			.time {
+			.bottom {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
 				font-size: 13px;
+				min-height: 30px;
+				.apply {
+					img{
+						max-width: 20px;
+						border-radius: 2px;
+					}
+					background: $primary-color;
+					color: #fff;
+					padding: 5px 10px;
+					border-radius: 3px;
+					font-size: 11px;
+				}
 			}
 		}
 		.more-jobs-icon {
@@ -343,6 +358,58 @@
 		}
 		&:hover {
 			box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.2);
+		}
+	}
+}
+
+.browse-jobs{
+	.browse-jobs-menu{
+		border-bottom: 1px solid $border-color;
+		display: flex;
+		justify-content: space-around;
+		margin-bottom: 30px;
+		li{
+			display: inline-block;
+			list-style: none;
+			span{
+				cursor: pointer;
+				display: inline-block;
+				color: #333333;
+				padding: 10px;
+				position: relative;
+				transition: .35s;
+				&:hover{
+					font-weight: 700;
+				}
+			}
+			&.active span{
+				font-weight: 700;
+				&::before{
+					content: "";
+					position: absolute;
+					width: 150%;
+					height: 4px;
+					bottom: 0;
+					left: 50%;
+					@include transform(translateX(-50%));
+					background: #6381a1;
+					border-radius: 0px 0px 2px 2px;
+				}
+			}
+		}
+	}
+	ul{
+		li{
+			list-style: none;
+			line-height: 26px;
+			a{
+				color: $primary-color;
+				text-decoration: none;
+				font-size: 14px;
+				span{
+					color: $text-color-light;
+				}
+			}
 		}
 	}
 }

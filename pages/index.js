@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import React, { useRef, useState, useEffect } from 'react';
 import Layout from '../components/Layout';
 import BannerSearch from '../components/BannerSearch';
@@ -16,6 +17,7 @@ import { faClock, faBell } from '@fortawesome/free-regular-svg-icons';
 
 
 const Home = (props) => {
+    const [browseJobsActive, setBrowseJobsActive] = useState('industry');
     const [moreJobsId, setMoreJobsId] = useState(null);
     const moreJobsRef = useRef(null);
     const moreJobsButtonRef = useRef(null);
@@ -97,7 +99,10 @@ const Home = (props) => {
                                             <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
                                             <li><a href="#">Dhaka, Bangladesh</a></li>
                                         </ul>
-                                        <div className="time">2 weeks ago</div>
+                                        <div className="bottom">
+                                            <span>2 weeks ago</span>
+                                            <span className="apply"><img src="/favicon.jpg" alt="logo" /> Apply For Employment</span>
+                                        </div>
                                     </div>
                                     {
                                         moreJobsId === 1 &&
@@ -122,7 +127,9 @@ const Home = (props) => {
                                             <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
                                             <li><a href="#">Dhaka, Bangladesh</a></li>
                                         </ul>
-                                        <div className="time">2 weeks ago</div>
+                                        <div className="bottom">
+                                            <span>2 weeks ago</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -137,7 +144,9 @@ const Home = (props) => {
                                             <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
                                             <li><a href="#">Dhaka, Bangladesh</a></li>
                                         </ul>
-                                        <div className="time">2 weeks ago</div>
+                                        <div className="bottom">
+                                            <span>2 weeks ago</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -152,7 +161,9 @@ const Home = (props) => {
                                             <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
                                             <li><a href="#">Dhaka, Bangladesh</a></li>
                                         </ul>
-                                        <div className="time">2 weeks ago</div>
+                                        <div className="bottom">
+                                            <span>2 weeks ago</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -167,7 +178,9 @@ const Home = (props) => {
                                             <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
                                             <li><a href="#">Dhaka, Bangladesh</a></li>
                                         </ul>
-                                        <div className="time">2 weeks ago</div>
+                                        <div className="bottom">
+                                            <span>2 weeks ago</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -182,7 +195,9 @@ const Home = (props) => {
                                             <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
                                             <li><a href="#">Dhaka, Bangladesh</a></li>
                                         </ul>
-                                        <div className="time">2 weeks ago</div>
+                                        <div className="bottom">
+                                            <span>2 weeks ago</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -197,7 +212,9 @@ const Home = (props) => {
                                             <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
                                             <li><a href="#">Dhaka, Bangladesh</a></li>
                                         </ul>
-                                        <div className="time">2 weeks ago</div>
+                                        <div className="bottom">
+                                            <span>2 weeks ago</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -212,7 +229,9 @@ const Home = (props) => {
                                             <li><a href="#">Walton Hi-Tech Industries Ltd.</a></li>
                                             <li><a href="#">Dhaka, Bangladesh</a></li>
                                         </ul>
-                                        <div className="time">2 weeks ago</div>
+                                        <div className="bottom">
+                                            <span>2 weeks ago</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -374,61 +393,6 @@ const Home = (props) => {
                         </div>
                     </div>
                 </section> */}
-
-
-                <section className="why-employment">
-                    <div className="overlay section-padding">
-                        <div className="container">
-                            <h1 className="section-title">Why Employment</h1>
-                            <div className="row">
-                                <div className="col-sm-3">
-                                    <div className="why-item">
-                                        <div className="image icon-design">
-                                            <i className="flaticon-human-resources"></i>
-                                        </div>
-                                        <div className="content">
-                                            <h3><CountUp end={3000} />+</h3>
-                                            <p>Candidates</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-3">
-                                    <div className="why-item">
-                                        <div className="image icon-design">
-                                            <i className="flaticon-suitcase"></i>
-                                        </div>
-                                        <div className="content">
-                                            <h3><CountUp end={5000} />+</h3>
-                                            <p>Jobs</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-3">
-                                    <div className="why-item">
-                                        <div className="image icon-design">
-                                            <i className="flaticon-businessman-1"></i>
-                                        </div>
-                                        <div className="content">
-                                            <h3><CountUp end={1000} />+</h3>
-                                            <p>Employer</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-3">
-                                    <div className="why-item">
-                                        <div className="image icon-design">
-                                            <i className="flaticon-web"></i>
-                                        </div>
-                                        <div className="content">
-                                            <h3><CountUp end={500} />+</h3>
-                                            <p>Courses</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
 
                 {/* <section className="find-talents section-padding">
@@ -604,6 +568,61 @@ const Home = (props) => {
                     </div>
                 </section>
 
+
+                <section className="why-employment">
+                    <div className="overlay section-padding">
+                        <div className="container">
+                            <h1 className="section-title">Why Employment</h1>
+                            <div className="row">
+                                <div className="col-sm-3">
+                                    <div className="why-item">
+                                        <div className="image icon-design">
+                                            <i className="flaticon-human-resources"></i>
+                                        </div>
+                                        <div className="content">
+                                            <h3><CountUp end={3000} />+</h3>
+                                            <p>Candidates</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-3">
+                                    <div className="why-item">
+                                        <div className="image icon-design">
+                                            <i className="flaticon-suitcase"></i>
+                                        </div>
+                                        <div className="content">
+                                            <h3><CountUp end={5000} />+</h3>
+                                            <p>Jobs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-3">
+                                    <div className="why-item">
+                                        <div className="image icon-design">
+                                            <i className="flaticon-businessman-1"></i>
+                                        </div>
+                                        <div className="content">
+                                            <h3><CountUp end={1000} />+</h3>
+                                            <p>Employer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-sm-3">
+                                    <div className="why-item">
+                                        <div className="image icon-design">
+                                            <i className="flaticon-web"></i>
+                                        </div>
+                                        <div className="content">
+                                            <h3><CountUp end={500} />+</h3>
+                                            <p>Courses</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section className="testimonial section-padding">
                     <div className="container">
                         <h1 className="section-title">Happy Faces</h1>
@@ -721,7 +740,7 @@ const Home = (props) => {
                     </div>
                 </section>
 
-                <section className="courses">
+                <section className="courses section-padding">
                     <div className="container">
                         <h1 className="section-title">Our Courses</h1>
                         <div className="row">
@@ -772,14 +791,114 @@ const Home = (props) => {
                             </div>
                         </div>
                     </div>
-                </section> 
+                </section>
 
-                <section className="advice section-padding">
+                {/* <section className="advice section-padding">
                     <div className="container">
                         <h1 className="section-title">Career Advice</h1>
-                        <div className="text-center">
-                            <iframe width="100%" height="500" src="https://www.youtube.com/embed/GXI0l3yqBrA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <div className="row">
+                            <div className="col-sm-4">
+                                <div className="text-center">
+                                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/GXI0l3yqBrA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="text-center">
+                                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/GXI0l3yqBrA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                </div>
+                            </div>
+                            <div className="col-sm-4">
+                                <div className="text-center">
+                                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/GXI0l3yqBrA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                </div>
+                            </div>
                         </div>
+
+                    </div>
+                </section> */}
+
+                <section className="browse-jobs section-padding">
+                    <h1 className="section-title">Browse Jobs</h1>
+                    <div className="container">
+                        <ul className="browse-jobs-menu">
+                            <li className={(browseJobsActive === 'industry') ? 'active' : ''}><span onClick={(e) => { setBrowseJobsActive('industry') }}>Industry</span></li>
+                            <li className={(browseJobsActive === 'department') ? 'active' : ''}><span onClick={(e) => { setBrowseJobsActive('department') }}>Department</span></li>
+                            <li className={(browseJobsActive === 'location') ? 'active' : ''}><span onClick={(e) => { setBrowseJobsActive('location') }}>Location</span></li>
+                            <li className={(browseJobsActive === 'designation') ? 'active' : ''}><span onClick={(e) => { setBrowseJobsActive('designation') }}>Designation</span></li>
+                            <li className={(browseJobsActive === 'skills') ? 'active' : ''}><span onClick={(e) => { setBrowseJobsActive('skills') }}>Skills</span></li>
+                        </ul>
+                        {
+                            browseJobsActive === 'industry' &&
+                            <ul className="row">
+                                <li className="col-sm-4"><Link href="#"><a>Online Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Data Entry Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Railway Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Private Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Part Time Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Freelance Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Banking Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Accounting Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Teaching Jobs <span>(120)</span></a></Link></li>
+                            </ul>
+                        }
+                        {
+                            browseJobsActive === 'department' &&
+                            <ul className="row">
+                                <li className="col-sm-4"><Link href="#"><a>Part Time Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Freelance Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Banking Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Accounting Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Teaching Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                            </ul>
+                        }
+                        {
+                            browseJobsActive === 'location' &&
+                            <ul className="row">
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Part Time Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Freelance Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Banking Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Accounting Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Teaching Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                            </ul>
+                        }
+                        {
+                            browseJobsActive === 'designation' &&
+                            <ul className="row">
+                                <li className="col-sm-4"><Link href="#"><a>Part Time Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Freelance Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Banking Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Accounting Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Teaching Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>IT - Software Jobs <span>(120)</span></a></Link></li>
+                            </ul>
+                        }
+                        {
+                            browseJobsActive === 'skills' &&
+                            <ul className="row">
+                                <li className="col-sm-4"><Link href="#"><a>Online Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Data Entry Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Railway Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Private Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Part Time Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Freelance Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Banking Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Accounting Jobs <span>(120)</span></a></Link></li>
+                                <li className="col-sm-4"><Link href="#"><a>Teaching Jobs <span>(120)</span></a></Link></li>
+                            </ul>
+                        }
+
                     </div>
                 </section>
 

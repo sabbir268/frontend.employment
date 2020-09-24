@@ -6,7 +6,7 @@ import { faFacebookF, faGoogle, faLinkedinIn, faYoutubeSquare } from '@fortaweso
 const Footer = (props) => {
     return (
         <footer>
-            <div className="footer-top">
+            {/* <div className="footer-top">
                 <div className="overlay">
                     <div className="container">
                         <div className="row">
@@ -63,7 +63,7 @@ const Footer = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className="footer-bottom">
                 <div className="container">
                     <div className="row">
