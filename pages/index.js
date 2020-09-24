@@ -772,7 +772,7 @@ const Home = (props) => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> 
 
                 <section className="advice section-padding">
                     <div className="container">
