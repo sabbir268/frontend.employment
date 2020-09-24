@@ -778,7 +778,7 @@ const Home = (props) => {
                     <div className="container">
                         <h1 className="section-title">Career Advice</h1>
                         <div className="text-center">
-                            <iframe width="900" height="500" src="https://www.youtube.com/embed/GXI0l3yqBrA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe width="100%" height="500" src="https://www.youtube.com/embed/GXI0l3yqBrA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                     </div>
                 </section>
